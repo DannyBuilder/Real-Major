@@ -16,5 +16,12 @@ namespace Real_Major
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form3 forma3 = new Form3();
+            forma3.Show();
+            this.Hide();
+        }
     }
 }

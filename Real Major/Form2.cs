@@ -19,6 +19,9 @@ namespace Real_Major
         public Form2()
         {
             InitializeComponent();
+            errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            errorProvider2.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            errorProvider3.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -27,6 +30,26 @@ namespace Real_Major
             string password2 = textBox3.Text;
 
             string Pattern = "^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%_&?*])[A-Za-z0-9!@#$%_&?*]{8,}$";
+
+            if (string.IsNullOrEmpty(usernameTextBox.Text))
+            {
+                errorProvider1.SetError(usernameTextBox, "Invalid username");
+            }
+            else {
+
+                errorProvider1.SetError(usernameTextBox, string.Empty);
+            }
+            if (string.IsNullOrEmpty(TextBox2.Text))
+            {
+
+                errorProvider2.SetError(TextBox2, "Invalid Password");
+            }
+            else {
+                errorProvider2.SetError(TextBox2, string.Empty);
+
+            }
+
+
             if (Regex.IsMatch(password1, Pattern) && password1.Equals(password2))
             {
                 MessageBox.Show("Valid");
@@ -52,7 +75,7 @@ namespace Real_Major
             }
             else
             {
-                MessageBox.Show("Invalid");
+                MessageBox.Show("Invalid Password");
             }
 
 
@@ -63,6 +86,13 @@ namespace Real_Major
             var bytes = Encoding.Default.GetBytes(text);
             var hash = hashAlgorithm.ComputeHash(bytes);
             return Convert.ToBase64String(hash);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 forma1 = new Form1();
+            forma1.Show();
+            this.Hide();
         }
 
     }

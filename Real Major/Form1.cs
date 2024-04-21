@@ -20,6 +20,8 @@ namespace Real_Major
         public Form1()
         {
             InitializeComponent();
+            errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            errorProvider2.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -61,7 +63,7 @@ namespace Real_Major
                         salt = DateTime.Now.ToString();
                         salt1 = salt;
                         string hashedpass = hashpassword($"{password}{data}");
-                        if (username == "Daniel") {
+                        if (username == "Daniel" && pass == hashedpass) {
                             DialogResult = DialogResult.OK;
                             Form3 admin = new Form3();
                             admin.Show();

@@ -12,9 +12,27 @@ namespace Real_Major
 {
     public partial class Form6 : Form
     {
-        public Form6()
+        bool ab;
+        public Form6(bool a)
         {
+            ab = a;
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (ab)
+            {
+                Form3 forma3 = new Form3();
+                forma3.Show();
+                this.Hide();
+            }
+            else {
+                Form4 forma4 = new Form4();
+                forma4.Show();
+                this.Hide();
+            }
+
         }
     }
 }
