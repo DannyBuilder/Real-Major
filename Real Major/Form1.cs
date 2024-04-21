@@ -45,8 +45,8 @@ namespace Real_Major
             string connectionString = @"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True";
             using (SqlConnection con = new SqlConnection(connectionString))
             {
-               try
-               {
+                try
+                {
                     con.Open();
                     SqlCommand cmd = new SqlCommand("SELECT pass, date_ from UserProfile where Username = @username", con);
                     cmd.Parameters.AddWithValue("@username", username);
@@ -63,7 +63,8 @@ namespace Real_Major
                         salt = DateTime.Now.ToString();
                         salt1 = salt;
                         string hashedpass = hashpassword($"{password}{data}");
-                        if (username == "Daniel" && pass == hashedpass) {
+                        if (username == "Daniel" && pass == hashedpass)
+                        {
                             DialogResult = DialogResult.OK;
                             Form3 admin = new Form3();
                             admin.Show();
@@ -77,7 +78,8 @@ namespace Real_Major
                             this.Hide();
 
                         }
-                        else {
+                        else
+                        {
                             MessageBox.Show("Incorrect password!");
                         }
                     }
@@ -86,12 +88,12 @@ namespace Real_Major
                         MessageBox.Show("No such user!");
 
                     }
-             }
-               catch (Exception ex)
-             {
-                   MessageBox.Show("Error");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error");
 
-           }
+                }
 
 
 
@@ -103,6 +105,11 @@ namespace Real_Major
                 var hash = hashAlgorithm.ComputeHash(bytes);
                 return Convert.ToBase64String(hash);
             }
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }

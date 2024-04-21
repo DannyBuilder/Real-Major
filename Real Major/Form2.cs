@@ -35,7 +35,8 @@ namespace Real_Major
             {
                 errorProvider1.SetError(usernameTextBox, "Invalid username");
             }
-            else {
+            else
+            {
 
                 errorProvider1.SetError(usernameTextBox, string.Empty);
             }
@@ -44,7 +45,8 @@ namespace Real_Major
 
                 errorProvider2.SetError(TextBox2, "Invalid Password");
             }
-            else {
+            else
+            {
                 errorProvider2.SetError(TextBox2, string.Empty);
 
             }
@@ -95,6 +97,10 @@ namespace Real_Major
             this.Hide();
         }
 
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

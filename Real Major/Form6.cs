@@ -27,11 +27,17 @@ namespace Real_Major
                 forma3.Show();
                 this.Hide();
             }
-            else {
+            else
+            {
                 Form4 forma4 = new Form4();
                 forma4.Show();
                 this.Hide();
             }
+
+        }
+
+        private void Form6_Load(object sender, EventArgs e)
+        {
 
         }
     }

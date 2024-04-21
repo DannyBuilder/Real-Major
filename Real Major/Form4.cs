@@ -109,5 +109,10 @@ namespace Real_Major
                 MessageBox.Show("Error retrieving towns from the database: " + ex.Message);
             }
         }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
