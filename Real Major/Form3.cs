@@ -116,5 +116,10 @@ namespace Real_Major
             House.Show();
             this.Hide();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

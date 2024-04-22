@@ -12,11 +12,15 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Microsoft.VisualBasic.ApplicationServices;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Real_Major
 {
+
     public partial class Form1 : Form
     {
+        public static UserClass user;
         public Form1()
         {
             InitializeComponent();
@@ -63,19 +67,21 @@ namespace Real_Major
                         salt = DateTime.Now.ToString();
                         salt1 = salt;
                         string hashedpass = hashpassword($"{password}{data}");
-                        if (username == "Daniel" && pass == hashedpass)
+                        if (pass == hashedpass)
                         {
-                            DialogResult = DialogResult.OK;
-                            Form3 admin = new Form3();
-                            admin.Show();
-                            this.Hide();
-
-                        }
-                        else if (pass == hashedpass)
-                        {
-                            Form4 user = new Form4();
-                            user.Show();
-                            this.Hide();
+                            fillUserInfo(connectionString, username);
+                            if (user.roleID == 1)
+                            {
+                                Form4 userForm = new Form4();
+                                userForm.Show();
+                                this.Hide();
+                            }
+                            else if (user.roleID == 2)
+                            {
+                                Form3 adminForm = new Form3();
+                                adminForm.Show();
+                                this.Hide();
+                            }
 
                         }
                         else
@@ -111,6 +117,34 @@ namespace Real_Major
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void fillUserInfo(string connectionString, string username)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT id,role from UserProfile where Username = @username", con);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    SqlDataAdapter adapter = new SqlDataAdapter();
+                    adapter.SelectCommand = cmd;
+                    DataTable resultTable = new DataTable();
+                    adapter.Fill(resultTable);
+                    if (resultTable.Rows.Count > 0)
+                    {
+                        int id = int.Parse((string)resultTable.Rows[0]["id"]);
+                        int role = int.Parse((string)resultTable.Rows[0]["role"]);
+
+                        user = new UserClass(id, username, role);
+                    }
+                }
+                catch
+                {
+
+                }
+            }
         }
     }
 }
