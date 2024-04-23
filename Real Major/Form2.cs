@@ -101,6 +101,11 @@ namespace Real_Major
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

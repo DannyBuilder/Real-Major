@@ -116,10 +116,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(35, 158);
+            pictureBox1.Location = new Point(35, 204);
             pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(471, 473);
+            pictureBox1.Size = new Size(470, 470);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 15;
             pictureBox1.TabStop = false;
