@@ -28,190 +28,185 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            TextBox2 = new TextBox();
-            usernameTextBox = new TextBox();
-            textBox3 = new TextBox();
-            Button2 = new Button();
-            pictureBox1 = new PictureBox();
-            errorProvider1 = new ErrorProvider(components);
-            errorProvider2 = new ErrorProvider(components);
-            errorProvider3 = new ErrorProvider(components);
-            button1 = new Button();
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox5 = new PictureBox();
-            label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            SuspendLayout();
+            this.TextBox2 = new System.Windows.Forms.TextBox();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            this.SuspendLayout();
             // 
             // TextBox2
             // 
-            TextBox2.Location = new Point(760, 299);
-            TextBox2.Margin = new Padding(4, 5, 4, 5);
-            TextBox2.Name = "TextBox2";
-            TextBox2.PasswordChar = '*';
-            TextBox2.Size = new Size(190, 31);
-            TextBox2.TabIndex = 13;
+            this.TextBox2.Location = new System.Drawing.Point(532, 179);
+            this.TextBox2.Name = "TextBox2";
+            this.TextBox2.PasswordChar = '*';
+            this.TextBox2.Size = new System.Drawing.Size(134, 23);
+            this.TextBox2.TabIndex = 13;
             // 
             // usernameTextBox
             // 
-            usernameTextBox.Location = new Point(760, 221);
-            usernameTextBox.Margin = new Padding(4, 5, 4, 5);
-            usernameTextBox.Name = "usernameTextBox";
-            usernameTextBox.Size = new Size(190, 31);
-            usernameTextBox.TabIndex = 11;
+            this.usernameTextBox.Location = new System.Drawing.Point(532, 133);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(134, 23);
+            this.usernameTextBox.TabIndex = 11;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(760, 365);
-            textBox3.Margin = new Padding(4, 5, 4, 5);
-            textBox3.Name = "textBox3";
-            textBox3.PasswordChar = '*';
-            textBox3.Size = new Size(190, 31);
-            textBox3.TabIndex = 15;
+            this.textBox3.Location = new System.Drawing.Point(532, 219);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.PasswordChar = '*';
+            this.textBox3.Size = new System.Drawing.Size(134, 23);
+            this.textBox3.TabIndex = 15;
             // 
             // Button2
             // 
-            Button2.Location = new Point(760, 500);
-            Button2.Margin = new Padding(4, 5, 4, 5);
-            Button2.Name = "Button2";
-            Button2.Size = new Size(156, 46);
-            Button2.TabIndex = 17;
-            Button2.Text = "Sign up";
-            Button2.UseVisualStyleBackColor = true;
-            Button2.Click += Button2_Click;
+            this.Button2.Location = new System.Drawing.Point(532, 300);
+            this.Button2.Name = "Button2";
+            this.Button2.Size = new System.Drawing.Size(109, 28);
+            this.Button2.TabIndex = 17;
+            this.Button2.Text = "Sign up";
+            this.Button2.UseVisualStyleBackColor = true;
+            this.Button2.Click += new System.EventHandler(this.Button2_Click_1);
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(35, 204);
-            pictureBox1.Margin = new Padding(4, 5, 4, 5);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(470, 470);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 19;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(24, 122);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(329, 282);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
             // 
             // errorProvider1
             // 
-            errorProvider1.ContainerControl = this;
+            this.errorProvider1.ContainerControl = this;
             // 
             // errorProvider2
             // 
-            errorProvider2.ContainerControl = this;
-            // 
-            // errorProvider3
-            // 
-            errorProvider3.ContainerControl = this;
+            this.errorProvider2.ContainerControl = this;
             // 
             // button1
             // 
-            button1.Location = new Point(35, 684);
-            button1.Margin = new Padding(4, 5, 4, 5);
-            button1.Name = "button1";
-            button1.Size = new Size(108, 39);
-            button1.TabIndex = 20;
-            button1.Text = "Back";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            this.button1.Location = new System.Drawing.Point(24, 410);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(76, 23);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(519, -1);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(629, 753);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 21;
-            pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(363, -1);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(440, 452);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
-            pictureBox3.BackColor = Color.WhiteSmoke;
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(696, 212);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(40, 40);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 22;
-            pictureBox3.TabStop = false;
+            this.pictureBox3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(487, 127);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(28, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 22;
+            this.pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
-            pictureBox4.BackColor = Color.WhiteSmoke;
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(696, 290);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(40, 40);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 23;
-            pictureBox4.TabStop = false;
+            this.pictureBox4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(487, 174);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(28, 24);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 23;
+            this.pictureBox4.TabStop = false;
             // 
             // pictureBox5
             // 
-            pictureBox5.BackColor = Color.WhiteSmoke;
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(696, 356);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(40, 40);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 24;
-            pictureBox5.TabStop = false;
+            this.pictureBox5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(487, 214);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(28, 24);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 24;
+            this.pictureBox5.TabStop = false;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe Script", 29F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label1.Location = new Point(35, 26);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(471, 97);
-            label1.TabIndex = 25;
-            label1.Text = "Cartier Estate";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe Script", 29F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(24, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(314, 64);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Cartier Estate";
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
             // 
             // Form2
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(1142, 750);
-            Controls.Add(label1);
-            Controls.Add(pictureBox5);
-            Controls.Add(pictureBox4);
-            Controls.Add(pictureBox3);
-            Controls.Add(Button2);
-            Controls.Add(textBox3);
-            Controls.Add(TextBox2);
-            Controls.Add(usernameTextBox);
-            Controls.Add(pictureBox2);
-            Controls.Add(button1);
-            Controls.Add(pictureBox1);
-            Margin = new Padding(4, 5, 4, 5);
-            Name = "Form2";
-            Text = "Form2";
-            Load += Form2_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)errorProvider3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(799, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.Button2);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.TextBox2);
+            this.Controls.Add(this.usernameTextBox);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
+            this.Name = "Form2";
+            this.Text = "Form2";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -222,12 +217,12 @@
         private PictureBox pictureBox1;
         private ErrorProvider errorProvider1;
         private ErrorProvider errorProvider2;
-        private ErrorProvider errorProvider3;
         private Button button1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private PictureBox pictureBox5;
         private PictureBox pictureBox4;
         private Label label1;
+        private ErrorProvider errorProvider3;
     }
 }
