@@ -168,10 +168,12 @@ namespace Real_Major
                 MessageBox.Show(hashedpass);
                 SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-ETJDNTM;Initial Catalog=House_Offers;Integrated Security=True");
                 con.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO UserProfile (Username, pass, date_) VALUES (@username, @hashedpass, @salt)", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO UserProfile (Username, pass, date_, role_) VALUES (@username, @hashedpass, @salt, @role)", con);
                 cmd.Parameters.AddWithValue("@username", usernameTextBox.Text);
                 cmd.Parameters.AddWithValue("@salt", salt);
                 cmd.Parameters.AddWithValue("@hashedpass", hashedpass);
+                cmd.Parameters.AddWithValue("@role", 1);
+                cmd.ExecuteNonQuery();
                 cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("Added to the Database");

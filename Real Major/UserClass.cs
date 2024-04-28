@@ -22,6 +22,19 @@ namespace Real_Major
             //this.firstName = firstName;
             this.roleID = roleID;
         }
+        public UserClass() { 
+        
+        
+        }
+        public void fillUserinfo(int userID, string username, int roleID)
+        {
+            this.userID = userID;
+            this.username = username;
+            //this.firstName = firstName;
+            this.roleID = roleID;
+        }
+
+
 
 
     }

@@ -16,17 +16,19 @@ namespace Real_Major
 {
     public partial class Form3 : Form
     {
-        public Form3()
+        UserClass user1;
+        public Form3(UserClass user)
         {
+            user1 = user;
             InitializeComponent();
-            //  PopulateTownsComboBox();
-            //  PopulateCountriesComboBox();
-            //  PopulateOffersComboBox();
+            PopulateCountriesComboBox();
+            PopulateTownsComboBox();
+            PopulateOffersComboBox();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form5 Add_Delete = new Form5();
+            Form5 Add_Delete = new Form5(user1);
             Add_Delete.Show();
             this.Hide();
         }
@@ -112,7 +114,7 @@ namespace Real_Major
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form6 House = new Form6(true);
+            Form6 House = new Form6(user1,Convert.ToString(comboBox3.SelectedItem));
             House.Show();
             this.Hide();
         }
@@ -139,7 +141,7 @@ namespace Real_Major
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+           
         }
 
         private void Form3_Load_1(object sender, EventArgs e)
@@ -151,5 +153,13 @@ namespace Real_Major
         {
 
         }
+
+        private void HouseInformation_Click(object sender, EventArgs e)
+        {
+            Form7 forma7 = new Form7(user1, Convert.ToString(comboBox3.SelectedItem));
+            forma7.Show();
+            this.Hide();
+        }
+
     }
 }

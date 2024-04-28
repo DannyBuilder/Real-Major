@@ -20,7 +20,7 @@ namespace Real_Major
 
     public partial class Form1 : Form
     {
-        public static UserClass user;
+        public static UserClass user = new UserClass();
         public Form1()
         {
             InitializeComponent();
@@ -69,16 +69,17 @@ namespace Real_Major
                         string hashedpass = hashpassword($"{password}{data}");
                         if (pass == hashedpass)
                         {
-                            fillUserInfo(connectionString, username);
+                            fillUserInfo(connectionString, username, user);
+                            MessageBox.Show(Convert.ToString(user.roleID));
                             if (user.roleID == 1)
                             {
-                                Form4 userForm = new Form4();
+                                Form4 userForm = new Form4(user);
                                 userForm.Show();
                                 this.Hide();
                             }
                             else if (user.roleID == 2)
                             {
-                                Form3 adminForm = new Form3();
+                                Form3 adminForm = new Form3(user);
                                 adminForm.Show();
                                 this.Hide();
                             }
@@ -111,7 +112,7 @@ namespace Real_Major
                 var hash = hashAlgorithm.ComputeHash(bytes);
                 return Convert.ToBase64String(hash);
             }
-
+             
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -119,32 +120,37 @@ namespace Real_Major
 
         }
 
-        private void fillUserInfo(string connectionString, string username)
+        private void fillUserInfo(string connectionString, string username, UserClass user)
         {
+            int role;
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 try
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("SELECT id,role from UserProfile where Username = @username", con);
+                    SqlCommand cmd = new SqlCommand("SELECT role_ from UserProfile where Username = @username", con);
                     cmd.Parameters.AddWithValue("@username", username);
                     SqlDataAdapter adapter = new SqlDataAdapter();
                     adapter.SelectCommand = cmd;
                     DataTable resultTable = new DataTable();
                     adapter.Fill(resultTable);
+
                     if (resultTable.Rows.Count > 0)
                     {
-                        int id = int.Parse((string)resultTable.Rows[0]["id"]);
-                        int role = int.Parse((string)resultTable.Rows[0]["role"]);
+                        //    int id = int.Parse((string)resultTable.Rows[0]["id"]);
+                        role = (int)resultTable.Rows[0]["role_"];
 
-                        user = new UserClass(id, username, role);
+                        user.fillUserinfo(2, username, role);
                     }
-                }
-                catch
-                {
 
                 }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("SQL Error");
+                }
+
             }
         }
+
     }
 }

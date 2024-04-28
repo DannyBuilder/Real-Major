@@ -16,8 +16,10 @@ namespace Real_Major
 {
     public partial class Form4 : Form
     {
-        public Form4()
+        UserClass user1;
+        public Form4(UserClass user)
         {
+            user1 = user;
             InitializeComponent();
             PopulateCountriesComboBox();
             PopulateOffersComboBox();
@@ -26,7 +28,7 @@ namespace Real_Major
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form6 House = new Form6(false);
+            Form6 House = new Form6(user1, Convert.ToString(comboBox3.SelectedItem));
             House.Show();
             this.Hide();
         }
@@ -114,5 +116,6 @@ namespace Real_Major
         {
 
         }
+
     }
 }

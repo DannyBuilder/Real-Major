@@ -29,175 +29,196 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
-            label1 = new Label();
-            addButton = new Button();
-            deleteButton = new Button();
-            label5 = new Label();
-            pictureBox1 = new PictureBox();
-            button3 = new Button();
-            updateButton = new Button();
-            label = new Label();
-            countryBox = new TextBox();
-            countryButton = new RadioButton();
-            townButton = new RadioButton();
-            houseButton = new RadioButton();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.addButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.updateButton = new System.Windows.Forms.Button();
+            this.label = new System.Windows.Forms.Label();
+            this.countryBox = new System.Windows.Forms.TextBox();
+            this.countryButton = new System.Windows.Forms.RadioButton();
+            this.townButton = new System.Windows.Forms.RadioButton();
+            this.houseButton = new System.Windows.Forms.RadioButton();
+            this.newCountryBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(142, 307);
-            label1.Name = "label1";
-            label1.Size = new Size(0, 20);
-            label1.TabIndex = 0;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(142, 307);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 15);
+            this.label1.TabIndex = 0;
             // 
             // addButton
             // 
-            addButton.Location = new Point(242, 396);
-            addButton.Margin = new Padding(3, 4, 3, 4);
-            addButton.Name = "addButton";
-            addButton.Size = new Size(103, 43);
-            addButton.TabIndex = 1;
-            addButton.Text = "Add";
-            addButton.UseVisualStyleBackColor = true;
-            addButton.Click += button1_Click;
+            this.addButton.Location = new System.Drawing.Point(242, 396);
+            this.addButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(103, 43);
+            this.addButton.TabIndex = 1;
+            this.addButton.Text = "Add";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // deleteButton
             // 
-            deleteButton.Location = new Point(543, 396);
-            deleteButton.Margin = new Padding(3, 4, 3, 4);
-            deleteButton.Name = "deleteButton";
-            deleteButton.Size = new Size(103, 43);
-            deleteButton.TabIndex = 2;
-            deleteButton.Text = "Delete";
-            deleteButton.UseVisualStyleBackColor = true;
-            deleteButton.Click += deleteButton_Click;
+            this.deleteButton.Location = new System.Drawing.Point(543, 396);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(103, 43);
+            this.deleteButton.TabIndex = 2;
+            this.deleteButton.Text = "Delete";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 29F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(295, 25);
-            label5.Name = "label5";
-            label5.Size = new Size(316, 66);
-            label5.TabIndex = 15;
-            label5.Text = "Cartier Estate";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 29F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(295, 25);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(250, 52);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Cartier Estate";
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(769, -1);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(146, 160);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 16;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(769, -1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(146, 160);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // button3
             // 
-            button3.Location = new Point(85, 501);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(102, 41);
-            button3.TabIndex = 17;
-            button3.Text = "Back";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            this.button3.Location = new System.Drawing.Point(85, 501);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(102, 41);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "Back";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // updateButton
             // 
-            updateButton.Location = new Point(406, 396);
-            updateButton.Margin = new Padding(3, 4, 3, 4);
-            updateButton.Name = "updateButton";
-            updateButton.Size = new Size(103, 43);
-            updateButton.TabIndex = 18;
-            updateButton.Text = "Update";
-            updateButton.UseVisualStyleBackColor = true;
-            updateButton.Click += updateButton_Click;
+            this.updateButton.Location = new System.Drawing.Point(406, 396);
+            this.updateButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(103, 43);
+            this.updateButton.TabIndex = 18;
+            this.updateButton.Text = "Update";
+            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // label
             // 
-            label.AutoSize = true;
-            label.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label.Location = new Point(285, 212);
-            label.Name = "label";
-            label.Size = new Size(88, 20);
-            label.TabIndex = 19;
-            label.Text = "placeholder";
-            label.Click += label2_Click;
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label.Location = new System.Drawing.Point(285, 168);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(69, 15);
+            this.label.TabIndex = 19;
+            this.label.Text = "placeholder";
             // 
             // countryBox
             // 
-            countryBox.Location = new Point(406, 209);
-            countryBox.Margin = new Padding(3, 4, 3, 4);
-            countryBox.Name = "countryBox";
-            countryBox.Size = new Size(114, 27);
-            countryBox.TabIndex = 20;
+            this.countryBox.Location = new System.Drawing.Point(406, 165);
+            this.countryBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.countryBox.Name = "countryBox";
+            this.countryBox.Size = new System.Drawing.Size(114, 23);
+            this.countryBox.TabIndex = 20;
             // 
             // countryButton
             // 
-            countryButton.AutoSize = true;
-            countryButton.Location = new Point(251, 292);
-            countryButton.Name = "countryButton";
-            countryButton.Size = new Size(81, 24);
-            countryButton.TabIndex = 21;
-            countryButton.TabStop = true;
-            countryButton.Text = "Country";
-            countryButton.UseVisualStyleBackColor = true;
-            countryButton.CheckedChanged += countryButton_CheckedChanged;
+            this.countryButton.AutoSize = true;
+            this.countryButton.Location = new System.Drawing.Point(251, 292);
+            this.countryButton.Name = "countryButton";
+            this.countryButton.Size = new System.Drawing.Size(68, 19);
+            this.countryButton.TabIndex = 21;
+            this.countryButton.TabStop = true;
+            this.countryButton.Text = "Country";
+            this.countryButton.UseVisualStyleBackColor = true;
+            this.countryButton.CheckedChanged += new System.EventHandler(this.countryButton_CheckedChanged);
             // 
             // townButton
             // 
-            townButton.AutoSize = true;
-            townButton.Location = new Point(403, 292);
-            townButton.Name = "townButton";
-            townButton.Size = new Size(65, 24);
-            townButton.TabIndex = 22;
-            townButton.TabStop = true;
-            townButton.Text = "Town";
-            townButton.UseVisualStyleBackColor = true;
-            townButton.CheckedChanged += townButton_CheckedChanged;
+            this.townButton.AutoSize = true;
+            this.townButton.Location = new System.Drawing.Point(403, 292);
+            this.townButton.Name = "townButton";
+            this.townButton.Size = new System.Drawing.Size(53, 19);
+            this.townButton.TabIndex = 22;
+            this.townButton.TabStop = true;
+            this.townButton.Text = "Town";
+            this.townButton.UseVisualStyleBackColor = true;
+            this.townButton.CheckedChanged += new System.EventHandler(this.townButton_CheckedChanged);
             // 
             // houseButton
             // 
-            houseButton.AutoSize = true;
-            houseButton.Location = new Point(543, 292);
-            houseButton.Name = "houseButton";
-            houseButton.Size = new Size(72, 24);
-            houseButton.TabIndex = 23;
-            houseButton.TabStop = true;
-            houseButton.Text = "House";
-            houseButton.UseVisualStyleBackColor = true;
-            houseButton.CheckedChanged += houseButton_CheckedChanged;
+            this.houseButton.AutoSize = true;
+            this.houseButton.Location = new System.Drawing.Point(543, 292);
+            this.houseButton.Name = "houseButton";
+            this.houseButton.Size = new System.Drawing.Size(59, 19);
+            this.houseButton.TabIndex = 23;
+            this.houseButton.TabStop = true;
+            this.houseButton.Text = "House";
+            this.houseButton.UseVisualStyleBackColor = true;
+            this.houseButton.CheckedChanged += new System.EventHandler(this.houseButton_CheckedChanged);
+            // 
+            // newCountryBox
+            // 
+            this.newCountryBox.Location = new System.Drawing.Point(406, 223);
+            this.newCountryBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.newCountryBox.Name = "newCountryBox";
+            this.newCountryBox.Size = new System.Drawing.Size(114, 23);
+            this.newCountryBox.TabIndex = 25;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(285, 226);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 15);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Update to";
             // 
             // Form5
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(917, 544);
-            Controls.Add(houseButton);
-            Controls.Add(townButton);
-            Controls.Add(countryButton);
-            Controls.Add(countryBox);
-            Controls.Add(label);
-            Controls.Add(updateButton);
-            Controls.Add(button3);
-            Controls.Add(pictureBox1);
-            Controls.Add(label5);
-            Controls.Add(deleteButton);
-            Controls.Add(addButton);
-            Controls.Add(label1);
-            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "Form5";
-            Text = "Form5";
-            Load += Form5_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(917, 544);
+            this.Controls.Add(this.newCountryBox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.houseButton);
+            this.Controls.Add(this.townButton);
+            this.Controls.Add(this.countryButton);
+            this.Controls.Add(this.countryBox);
+            this.Controls.Add(this.label);
+            this.Controls.Add(this.updateButton);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.deleteButton);
+            this.Controls.Add(this.addButton);
+            this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "Form5";
+            this.Text = "Form5";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -218,5 +239,7 @@
         private RadioButton countryButton;
         private RadioButton townButton;
         private RadioButton houseButton;
+        private TextBox newCountryBox;
+        private Label label2;
     }
 }
