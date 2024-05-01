@@ -63,10 +63,14 @@ namespace Real_Major
                     pictureBox1.Image = selectedPicture;
                     MessageBox.Show("Data  was inserted");
                 }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("There was an error with the SQL Server! Please try again!");
+
+                }
                 catch (Exception ex)
                 {
-
-                    MessageBox.Show($"Error:{ex.Message}");
+                    MessageBox.Show("There was an error! Please try again!");
                 }
             }
         }
@@ -85,5 +89,7 @@ namespace Real_Major
                 return Image.FromStream(ms);
             }
         }
+
+
     }
 }

@@ -24,32 +24,58 @@ namespace Real_Major
             house1 = house;
 
             InitializeComponent();
-            
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True");
-            con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT Color, Adress, Price, Description_, Town FROM Offers WHERE House = @house", con);
-            cmd.Parameters.AddWithValue("@house", house1);
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            adapter.SelectCommand = cmd;
-            DataTable table = new DataTable();
-            adapter.Fill(table);
 
-            if (!(house1 == ""))
+            try
             {
-                Description.Text = table.Rows[0]["Description_"].ToString();
-                Adress.Text = table.Rows[0]["Adress"].ToString();
-                Color.Text = table.Rows[0]["Color"].ToString();
-                Price.Text = table.Rows[0]["Price"].ToString();
-                House.Text = house1;
-                con.Close();
+                SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True");
+                con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Color, Adress, Price, Description_, Town, photo FROM Offers WHERE House = @house", con);
+                cmd.Parameters.AddWithValue("@house", house1);
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                adapter.SelectCommand = cmd;
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+
+
+
+                if ((house1 == ""))
+                {
+                    Description.Text = "No House Selected";
+                    Adress.Text = "No House Selected";
+                    Color.Text = "No House Selected";
+                    Price.Text = "No House Selected";
+                    House.Text = "No House Selected";
+                    con.Close();
+                }
+                else if (!(DBNull.Value.Equals(table.Rows[0]["photo"])))
+                {
+                    Description.Text = table.Rows[0]["Description_"].ToString();
+                    Adress.Text = table.Rows[0]["Adress"].ToString();
+                    Color.Text = table.Rows[0]["Color"].ToString();
+                    Price.Text = table.Rows[0]["Price"].ToString();
+                    House.Text = house1;
+                    HousePicture.Image = ByteArrayToImage((byte[])table.Rows[0]["photo"]);
+                    con.Close();
+                }
+                else
+                {
+                    Description.Text = table.Rows[0]["Description_"].ToString();
+                    Adress.Text = table.Rows[0]["Adress"].ToString();
+                    Color.Text = table.Rows[0]["Color"].ToString();
+                    Price.Text = table.Rows[0]["Price"].ToString();
+                    House.Text = house1;
+                    con.Close();
+
+                }
             }
-            else {
-                Description.Text = "No House Selected";
-                Adress.Text = "No House Selected";
-                Color.Text = "No House Selected";
-                Price.Text = "No House Selected";
-                House.Text = "No House Selected";
-                con.Close();
+            catch (SqlException ex)
+            {
+                MessageBox.Show("There was an error with the SQL Server! Please try again!");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There was an error! Please try again!");
             }
         }
 
@@ -69,6 +95,21 @@ namespace Real_Major
             }
 
         }
+        private byte[] ImageToByteArray(Image picture)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                picture.Save(ms, picture.RawFormat);
+                return ms.ToArray();
+            }
+        }
+        private Image ByteArrayToImage(byte[] data)
+        {
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
+        }
 
         private void Form6_Load(object sender, EventArgs e)
         {
@@ -86,6 +127,11 @@ namespace Real_Major
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
         }

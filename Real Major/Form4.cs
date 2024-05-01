@@ -58,9 +58,14 @@ namespace Real_Major
                     }
                 }
             }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("There was an error with the SQL Server! Please try again!");
+
+            }
             catch (Exception ex)
             {
-                MessageBox.Show("Error retrieving countries from the database: " + ex.Message);
+                MessageBox.Show("There was an error! Please try again!");
             }
         }
         private void PopulateTownsComboBox()
@@ -82,9 +87,14 @@ namespace Real_Major
                     }
                 }
             }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("There was an error with the SQL Server! Please try again!");
+
+            }
             catch (Exception ex)
             {
-                MessageBox.Show("Error retrieving towns from the database: " + ex.Message);
+                MessageBox.Show("There was an error! Please try again!");
             }
         }
         private void PopulateOffersComboBox()
@@ -106,9 +116,14 @@ namespace Real_Major
                     }
                 }
             }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("There was an error with the SQL Server! Please try again!");
+
+            }
             catch (Exception ex)
             {
-                MessageBox.Show("Error retrieving towns from the database: " + ex.Message);
+                MessageBox.Show("There was an error! Please try again!");
             }
         }
 

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Color = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -40,22 +39,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.House = new System.Windows.Forms.Label();
             this.Description = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.HousePicture = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HousePicture)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(392, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.pictureBox1.Size = new System.Drawing.Size(384, 262);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // Color
             // 
@@ -154,12 +142,22 @@
             this.Description.Text = "Step into the epitome of luxury living with this majestic brick estate nestled in" +
     " the prestigious neighborhood of Tuxedo Park. ";
             // 
+            // HousePicture
+            // 
+            this.HousePicture.Location = new System.Drawing.Point(493, 0);
+            this.HousePicture.Name = "HousePicture";
+            this.HousePicture.Size = new System.Drawing.Size(308, 204);
+            this.HousePicture.TabIndex = 31;
+            this.HousePicture.TabStop = false;
+            this.HousePicture.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(799, 450);
+            this.Controls.Add(this.HousePicture);
             this.Controls.Add(this.Description);
             this.Controls.Add(this.House);
             this.Controls.Add(this.label2);
@@ -169,21 +167,18 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Color);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox3);
             this.Name = "Form6";
             this.Text = "Form6";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HousePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private PictureBox pictureBox1;
         private Label Color;
         private Label label4;
         private Button button1;
@@ -194,5 +189,6 @@
         private Label label2;
         private Label House;
         private Label Description;
+        private PictureBox HousePicture;
     }
 }

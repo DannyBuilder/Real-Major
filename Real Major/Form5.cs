@@ -43,29 +43,41 @@ namespace Real_Major
         private void deleteButton_Click(object sender, EventArgs e)
         {
             string connectionString = @"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True";
-            SqlConnection con = new SqlConnection(connectionString);
-            con.Open();
-            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                SqlConnection con = new SqlConnection(connectionString);
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
 
-            if (townButton.Checked)
-            {
-                cmd = new SqlCommand("Delete from Towns Where Town_Name = @Town", con);
-                cmd.Parameters.AddWithValue("@Town", countryBox.Text);
-            }
-            else if (countryButton.Checked)
-            {
-                cmd = new SqlCommand("Delete from Countries Where CountryName = @Country", con);
-                cmd.Parameters.AddWithValue("@Country", countryBox.Text);
-            }
-            else
-            {
-                cmd = new SqlCommand("Delete from Offers Where House = @House", con);
-                cmd.Parameters.AddWithValue("@House", countryBox.Text);
-            }
+                if (townButton.Checked)
+                {
+                    cmd = new SqlCommand("Delete from Towns Where Town_Name = @Town", con);
+                    cmd.Parameters.AddWithValue("@Town", countryBox.Text);
+                }
+                else if (countryButton.Checked)
+                {
+                    cmd = new SqlCommand("Delete from Countries Where CountryName = @Country", con);
+                    cmd.Parameters.AddWithValue("@Country", countryBox.Text);
+                }
+                else
+                {
+                    cmd = new SqlCommand("Delete from Offers Where House = @House", con);
+                    cmd.Parameters.AddWithValue("@House", countryBox.Text);
+                }
 
-            cmd.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("Record was deleted");
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record was deleted");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("There was an error with the SQL Server! Please try again!");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There was an error! Please try again!");
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -103,27 +115,39 @@ namespace Real_Major
             {
                 if (!string.IsNullOrWhiteSpace(countryBox.Text) && !string.IsNullOrWhiteSpace(newCountryBox.Text))
                 {
-                    using (SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True"))
+                    try
                     {
-                        using (SqlCommand cmd = new SqlCommand("UPDATE Towns SET Town_Name = @city WHERE Town_Name = @replacedCity", con))
+                        using (SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True"))
                         {
-                            cmd.Parameters.AddWithValue("@city", newCountryBox.Text);
-                            cmd.Parameters.AddWithValue("@replacedCity", countryBox.Text);
-                            con.Open();
-                            int rowsAffected = cmd.ExecuteNonQuery();
-                            con.Close();
+                            using (SqlCommand cmd = new SqlCommand("UPDATE Towns SET Town_Name = @city WHERE Town_Name = @replacedCity", con))
+                            {
+                                cmd.Parameters.AddWithValue("@city", newCountryBox.Text);
+                                cmd.Parameters.AddWithValue("@replacedCity", countryBox.Text);
+                                con.Open();
+                                int rowsAffected = cmd.ExecuteNonQuery();
+                                con.Close();
 
-                            if (rowsAffected > 0)
-                            {
-                                MessageBox.Show("Town updated successfully");
-                                countryBox.Clear();
-                                newCountryBox.Clear();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Town not found for replacement");
+                                if (rowsAffected > 0)
+                                {
+                                    MessageBox.Show("Town updated successfully");
+                                    countryBox.Clear();
+                                    newCountryBox.Clear();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Town not found for replacement");
+                                }
                             }
                         }
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("There was an error with the SQL Server! Please try again!");
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("There was an error! Please try again!");
                     }
                 }
                 else
@@ -135,27 +159,39 @@ namespace Real_Major
             {
                 if (!string.IsNullOrWhiteSpace(countryBox.Text) && !string.IsNullOrWhiteSpace(newCountryBox.Text))
                 {
-                    using (SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True"))
+                    try
                     {
-                        using (SqlCommand cmd = new SqlCommand("UPDATE Countries SET CountryName = @city WHERE CountryName = @replacedCity", con))
+                        using (SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True"))
                         {
-                            cmd.Parameters.AddWithValue("@city", newCountryBox.Text);
-                            cmd.Parameters.AddWithValue("@replacedCity", countryBox.Text);
-                            con.Open();
-                            int rowsAffected = cmd.ExecuteNonQuery();
-                            con.Close();
+                            using (SqlCommand cmd = new SqlCommand("UPDATE Countries SET CountryName = @city WHERE CountryName = @replacedCity", con))
+                            {
+                                cmd.Parameters.AddWithValue("@city", newCountryBox.Text);
+                                cmd.Parameters.AddWithValue("@replacedCity", countryBox.Text);
+                                con.Open();
+                                int rowsAffected = cmd.ExecuteNonQuery();
+                                con.Close();
 
-                            if (rowsAffected > 0)
-                            {
-                                MessageBox.Show("Country updated successfully");
-                                countryBox.Clear();
-                                newCountryBox.Clear();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Country not found for replacement");
+                                if (rowsAffected > 0)
+                                {
+                                    MessageBox.Show("Country updated successfully");
+                                    countryBox.Clear();
+                                    newCountryBox.Clear();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Country not found for replacement");
+                                }
                             }
                         }
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("There was an error with the SQL Server! Please try again!");
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("There was an error! Please try again!");
                     }
                 }
                 else
@@ -166,27 +202,39 @@ namespace Real_Major
             else {
                 if (!string.IsNullOrWhiteSpace(countryBox.Text) && !string.IsNullOrWhiteSpace(newCountryBox.Text))
                 {
-                    using (SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True"))
+                    try
                     {
-                        using (SqlCommand cmd = new SqlCommand("UPDATE Offers SET House = @city WHERE House = @replacedCity", con))
+                        using (SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True"))
                         {
-                            cmd.Parameters.AddWithValue("@city", newCountryBox.Text);
-                            cmd.Parameters.AddWithValue("@replacedCity", countryBox.Text);
-                            con.Open();
-                            int rowsAffected = cmd.ExecuteNonQuery();
-                            con.Close();
+                            using (SqlCommand cmd = new SqlCommand("UPDATE Offers SET House = @city WHERE House = @replacedCity", con))
+                            {
+                                cmd.Parameters.AddWithValue("@city", newCountryBox.Text);
+                                cmd.Parameters.AddWithValue("@replacedCity", countryBox.Text);
+                                con.Open();
+                                int rowsAffected = cmd.ExecuteNonQuery();
+                                con.Close();
 
-                            if (rowsAffected > 0)
-                            {
-                                MessageBox.Show("House offer updated successfully");
-                                countryBox.Clear();
-                                newCountryBox.Clear();
-                            }
-                            else
-                            {
-                                MessageBox.Show("House offer not found for replacement");
+                                if (rowsAffected > 0)
+                                {
+                                    MessageBox.Show("House offer updated successfully");
+                                    countryBox.Clear();
+                                    newCountryBox.Clear();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("House offer not found for replacement");
+                                }
                             }
                         }
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("There was an error with the SQL Server! Please try again!");
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("There was an error! Please try again!");
                     }
                 }
                 else
@@ -200,29 +248,41 @@ namespace Real_Major
         private void addButton_Click(object sender, EventArgs e)
         {
             string connectionString = @"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True";
-            SqlConnection con = new SqlConnection(connectionString);
-            con.Open();
-            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                SqlConnection con = new SqlConnection(connectionString);
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
 
-            if (townButton.Checked)
-            {
-                cmd = new SqlCommand("INSERT INTO Towns (Town_Name) VALUES(@Town)", con);
-                cmd.Parameters.AddWithValue("@Town", countryBox.Text);
-            }
-            else if (countryButton.Checked)
-            {
-                cmd = new SqlCommand("INSERT INTO Countries (CountryName) VALUES(@Country)", con);
-                cmd.Parameters.AddWithValue("@Country", countryBox.Text);
-            }
-            else
-            {
-                cmd = new SqlCommand("INSERT INTO Offers (House) VALUES(@House)", con);
-                cmd.Parameters.AddWithValue("@House", countryBox.Text);
-            }
+                if (townButton.Checked)
+                {
+                    cmd = new SqlCommand("INSERT INTO Towns (Town_Name) VALUES(@Town)", con);
+                    cmd.Parameters.AddWithValue("@Town", countryBox.Text);
+                }
+                else if (countryButton.Checked)
+                {
+                    cmd = new SqlCommand("INSERT INTO Countries (CountryName) VALUES(@Country)", con);
+                    cmd.Parameters.AddWithValue("@Country", countryBox.Text);
+                }
+                else
+                {
+                    cmd = new SqlCommand("INSERT INTO Offers (House) VALUES(@House)", con);
+                    cmd.Parameters.AddWithValue("@House", countryBox.Text);
+                }
 
-            cmd.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("Record was added");
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record was added");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("There was an error with the SQL Server! Please try again!");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There was an error! Please try again!");
+            }
         }
 
 

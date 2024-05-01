@@ -47,6 +47,8 @@ namespace Real_Major
             string pass;
             string data;
             string connectionString = @"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True";
+                        
+
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 try
@@ -60,6 +62,7 @@ namespace Real_Major
                     adapter.Fill(resultTable);
                     if (resultTable.Rows.Count > 0)
                     {
+                        errorProvider1.SetError(usernameBox, string.Empty);
                         pass = (string)resultTable.Rows[0]["pass"];
                         data = (string)resultTable.Rows[0]["date_"];
                         string salt = "";
@@ -69,6 +72,8 @@ namespace Real_Major
                         string hashedpass = hashpassword($"{password}{data}");
                         if (pass == hashedpass)
                         {
+                            errorProvider2.SetError(passBox, string.Empty);
+
                             fillUserInfo(connectionString, username, user);
                             MessageBox.Show(Convert.ToString(user.roleID));
                             if (user.roleID == 1)
@@ -87,20 +92,25 @@ namespace Real_Major
                         }
                         else
                         {
-                            MessageBox.Show("Incorrect password!");
+                            errorProvider2.SetError(passBox, "Incorrect password");
                         }
                     }
                     else
                     {
-                        MessageBox.Show("No such user!");
+                        errorProvider1.SetError(usernameBox, "No such user");
 
                     }
                 }
-                catch (Exception ex)
+                catch (SqlException ex)
                 {
-                    MessageBox.Show("Error");
+                    MessageBox.Show("There was an error with the SQL Server! Please try again!");
 
                 }
+                catch(Exception ex) {
+                    MessageBox.Show("There was an error! Please try again!");
+                }
+
+
 
 
 
@@ -146,7 +156,12 @@ namespace Real_Major
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show("SQL Error");
+                    MessageBox.Show("There was an error with the SQL Server! Please try again!");
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There was an error! Please try again!");
                 }
 
             }

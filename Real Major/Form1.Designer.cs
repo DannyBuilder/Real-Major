@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.Button2 = new System.Windows.Forms.Button();
+            this.SignUpButton = new System.Windows.Forms.Button();
             this.Label3 = new System.Windows.Forms.Label();
-            this.Button1 = new System.Windows.Forms.Button();
+            this.LoginButton = new System.Windows.Forms.Button();
             this.passBox = new System.Windows.Forms.TextBox();
             this.usernameBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,15 +50,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
-            // Button2
+            // SignUpButton
             // 
-            this.Button2.Location = new System.Drawing.Point(540, 355);
-            this.Button2.Name = "Button2";
-            this.Button2.Size = new System.Drawing.Size(109, 30);
-            this.Button2.TabIndex = 13;
-            this.Button2.Text = "Sign up";
-            this.Button2.UseVisualStyleBackColor = true;
-            this.Button2.Click += new System.EventHandler(this.Button2_Click);
+            this.SignUpButton.Location = new System.Drawing.Point(540, 355);
+            this.SignUpButton.Name = "SignUpButton";
+            this.SignUpButton.Size = new System.Drawing.Size(109, 30);
+            this.SignUpButton.TabIndex = 13;
+            this.SignUpButton.Text = "Sign up";
+            this.SignUpButton.UseVisualStyleBackColor = true;
+            this.SignUpButton.Click += new System.EventHandler(this.Button2_Click);
             // 
             // Label3
             // 
@@ -70,15 +70,15 @@
             this.Label3.TabIndex = 12;
             this.Label3.Text = "Don\'t have an account? Sign up here !";
             // 
-            // Button1
+            // LoginButton
             // 
-            this.Button1.Location = new System.Drawing.Point(540, 268);
-            this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(109, 30);
-            this.Button1.TabIndex = 11;
-            this.Button1.Text = "Login";
-            this.Button1.UseVisualStyleBackColor = true;
-            this.Button1.Click += new System.EventHandler(this.Button1_Click);
+            this.LoginButton.Location = new System.Drawing.Point(540, 268);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(109, 30);
+            this.LoginButton.TabIndex = 11;
+            this.LoginButton.Text = "Login";
+            this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.Button1_Click);
             // 
             // passBox
             // 
@@ -169,8 +169,8 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.Label3);
-            this.Controls.Add(this.Button2);
-            this.Controls.Add(this.Button1);
+            this.Controls.Add(this.SignUpButton);
+            this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.passBox);
             this.Controls.Add(this.usernameBox);
             this.Controls.Add(this.pictureBox2);
@@ -190,9 +190,9 @@
 
         #endregion
 
-        internal Button Button2;
+        internal Button SignUpButton;
         internal Label Label3;
-        internal Button Button1;
+        internal Button LoginButton;
         internal TextBox passBox;
         internal TextBox usernameBox;
         private Label label4;
