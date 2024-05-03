@@ -26,8 +26,8 @@ namespace Real_Major
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            string password1 = TextBox2.Text;
-            string password2 = textBox3.Text;
+            string password1 = passwordBox.Text;
+            string password2 = passwordBox2.Text;
 
             string Pattern = "^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%_&?*])[A-Za-z0-9!@#$%_&?*]{8,}$";
 
@@ -40,24 +40,24 @@ namespace Real_Major
 
                 errorProvider1.SetError(usernameTextBox, string.Empty);
             }
-            if (string.IsNullOrEmpty(TextBox2.Text))
+            if (string.IsNullOrEmpty(passwordBox.Text))
             {
 
-                errorProvider2.SetError(TextBox2, "Invalid Password");
+                errorProvider2.SetError(passwordBox, "Invalid Password");
             }
             else
             {
-                errorProvider2.SetError(TextBox2, string.Empty);
+                errorProvider2.SetError(passwordBox, string.Empty);
 
             }
-            if (string.IsNullOrEmpty(textBox3.Text))
+            if (string.IsNullOrEmpty(passwordBox2.Text))
             {
 
-                errorProvider3.SetError(textBox3, "Invalid Password");
+                errorProvider3.SetError(passwordBox2, "Invalid Password");
             }
             else
             {
-                errorProvider3.SetError(textBox3, string.Empty);
+                errorProvider3.SetError(passwordBox2, string.Empty);
 
             }
 
@@ -69,7 +69,7 @@ namespace Real_Major
                 string salt1;
                 salt = DateTime.Now.ToString();
                 salt1 = salt;
-                string password = TextBox2.Text;
+                string password = passwordBox.Text;
                 string hashedpass = hashpassword($"{password}{salt}");
                 MessageBox.Show(hashedpass);
                 SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-ETJDNTM;Initial Catalog=House_Offers;Integrated Security=True");
@@ -88,8 +88,8 @@ namespace Real_Major
             else
             {
                 errorProvider1.SetError(usernameTextBox, "Invalid username");
-                errorProvider2.SetError(TextBox2, "Invalid Password");
-                errorProvider3.SetError(textBox3, "Invalid Password");
+                errorProvider2.SetError(passwordBox, "Invalid Password");
+                errorProvider3.SetError(passwordBox2, "Invalid Password");
             }
         }
 
@@ -120,8 +120,8 @@ namespace Real_Major
 
         private void Button2_Click_1(object sender, EventArgs e)
         {
-            string password1 = TextBox2.Text;
-            string password2 = textBox3.Text;
+            string password1 = passwordBox.Text;
+            string password2 = passwordBox2.Text;
 
             string Pattern = "^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%_&?*])[A-Za-z0-9!@#$%_&?*]{8,}$";
 
@@ -134,46 +134,47 @@ namespace Real_Major
 
                 errorProvider1.SetError(usernameTextBox, string.Empty);
             }
-            if (string.IsNullOrEmpty(TextBox2.Text))
+            if (string.IsNullOrEmpty(passwordBox.Text))
             {
 
-                errorProvider2.SetError(TextBox2, "Invalid Password");
+                errorProvider2.SetError(passwordBox, "Invalid Password");
             }
             else
             {
-                errorProvider2.SetError(TextBox2, string.Empty);
+                errorProvider2.SetError(passwordBox, string.Empty);
 
             }
-            if (string.IsNullOrEmpty(textBox3.Text))
+            if (string.IsNullOrEmpty(passwordBox2.Text))
             {
 
-                errorProvider3.SetError(textBox3, "Invalid Password");
+                errorProvider3.SetError(passwordBox2, "Invalid Password");
             }
             else
             {
-                errorProvider3.SetError(textBox3, string.Empty);
+                errorProvider3.SetError(passwordBox2, string.Empty);
 
             }
 
 
             if (!Regex.IsMatch(password1, Pattern))
             {
-                errorProvider2.SetError(TextBox2, "Password must contain a number and a special character");
-                errorProvider3.SetError(textBox3, "Password must contain a number and a special character");
+                errorProvider2.SetError(passwordBox, "Password must contain a number and a special character");
+                errorProvider3.SetError(passwordBox2, "Password must contain a number and a special character");
 
             }
             else if (!password1.Equals(password2))
             {
-                errorProvider2.SetError(TextBox2, "Password do not match");
-                errorProvider3.SetError(textBox3, "Password do not match");
+                errorProvider2.SetError(passwordBox, "Password do not match");
+                errorProvider3.SetError(passwordBox2, "Password do not match");
 
             }
-            else {
-                errorProvider2.SetError(TextBox2, string.Empty);
-                errorProvider3.SetError(textBox3, string.Empty);
+            else
+            {
+                errorProvider2.SetError(passwordBox, string.Empty);
+                errorProvider3.SetError(passwordBox2, string.Empty);
             }
 
-           
+
 
             if (Regex.IsMatch(password1, Pattern) && password1.Equals(password2))
             {
@@ -182,7 +183,7 @@ namespace Real_Major
                 string salt1;
                 salt = DateTime.Now.ToString();
                 salt1 = salt;
-                string password = TextBox2.Text;
+                string password = passwordBox.Text;
                 string hashedpass = hashpassword($"{password}{salt}");
                 MessageBox.Show(hashedpass);
                 SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-ETJDNTM;Initial Catalog=House_Offers;Integrated Security=True");
@@ -219,6 +220,16 @@ namespace Real_Major
             Form1 forma1 = new Form1();
             forma1.Show();
             this.Hide();
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form2_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -26,19 +26,7 @@ namespace Real_Major
             PopulateOffersComboBox();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form5 Add_Delete = new Form5(user1);
-            Add_Delete.Show();
-            this.Hide();
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form1 forma1 = new Form1();
-            forma1.Show();
-            this.Hide();
-        }
         private void PopulateCountriesComboBox()
         {
             try
@@ -52,7 +40,7 @@ namespace Real_Major
                         SqlDataReader reader = command.ExecuteReader();
                         while (reader.Read())
                         {
-                            comboBox1.Items.Add(reader["CountryName"].ToString());
+                            countryComboBox.Items.Add(reader["CountryName"].ToString());
                         }
                         reader.Close();
                     }
@@ -81,7 +69,7 @@ namespace Real_Major
                         SqlDataReader reader = command.ExecuteReader();
                         while (reader.Read())
                         {
-                            comboBox2.Items.Add(reader["Town_Name"].ToString());
+                            townComboBox.Items.Add(reader["Town_Name"].ToString());
                         }
                         reader.Close();
                     }
@@ -110,7 +98,7 @@ namespace Real_Major
                         SqlDataReader reader = command.ExecuteReader();
                         while (reader.Read())
                         {
-                            comboBox3.Items.Add(reader["House"].ToString());
+                            houseComboBox.Items.Add(reader["House"].ToString());
                         }
                         reader.Close();
                     }
@@ -127,54 +115,34 @@ namespace Real_Major
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Form6 House = new Form6(user1,Convert.ToString(comboBox3.SelectedItem));
-            House.Show();
-            this.Hide();
-        }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Form3_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void Form3_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void HouseInformation_Click(object sender, EventArgs e)
         {
-            Form7 forma7 = new Form7(user1, Convert.ToString(comboBox3.SelectedItem));
+            Form7 forma7 = new Form7(user1, Convert.ToString(houseComboBox.SelectedItem));
             forma7.Show();
             this.Hide();
         }
 
+        private void showButton_Click(object sender, EventArgs e)
+        {
+            Form6 House = new Form6(user1, Convert.ToString(houseComboBox.SelectedItem));
+            House.Show();
+            this.Hide();
+        }
+
+        private void changeInfoButton_Click(object sender, EventArgs e)
+        {
+            Form5 Add_Delete = new Form5(user1);
+            Add_Delete.Show();
+            this.Hide();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Form1 forma1 = new Form1();
+            forma1.Show();
+            this.Hide();
+        }
     }
 }

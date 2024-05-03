@@ -29,153 +29,155 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6));
-            this.Color = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.Adress = new System.Windows.Forms.Label();
-            this.Price = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.House = new System.Windows.Forms.Label();
-            this.Description = new System.Windows.Forms.Label();
-            this.HousePicture = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HousePicture)).BeginInit();
-            this.SuspendLayout();
+            Color = new Label();
+            label4 = new Label();
+            button1 = new Button();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            Adress = new Label();
+            Price = new Label();
+            label2 = new Label();
+            House = new Label();
+            Description = new Label();
+            HousePicture = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)HousePicture).BeginInit();
+            SuspendLayout();
             // 
             // Color
             // 
-            this.Color.AutoSize = true;
-            this.Color.Location = new System.Drawing.Point(636, 286);
-            this.Color.Name = "Color";
-            this.Color.Size = new System.Drawing.Size(131, 15);
-            this.Color.TabIndex = 1;
-            this.Color.Text = "Size:  360 square meters";
+            Color.AutoSize = true;
+            Color.Location = new Point(727, 381);
+            Color.Name = "Color";
+            Color.Size = new Size(168, 20);
+            Color.TabIndex = 1;
+            Color.Text = "Size:  360 square meters";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 29F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(24, 115);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(250, 52);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Cartier Estate";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            label4.AutoSize = true;
+            label4.BackColor = System.Drawing.Color.WhiteSmoke;
+            label4.Font = new Font("Segoe UI", 29F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(27, 153);
+            label4.Name = "label4";
+            label4.Size = new Size(316, 66);
+            label4.TabIndex = 15;
+            label4.Text = "Cartier Estate";
+            label4.Click += label4_Click;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(69, 396);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Location = new Point(79, 528);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(87, 31);
+            button1.TabIndex = 0;
+            button1.Text = "Back";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(-3, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(804, 204);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 20;
-            this.pictureBox3.TabStop = false;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(-3, 0);
+            pictureBox3.Margin = new Padding(2, 3, 2, 3);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(919, 272);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 20;
+            pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(-3, -8);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(140, 120);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 24;
-            this.pictureBox4.TabStop = false;
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(-3, -11);
+            pictureBox4.Margin = new Padding(3, 4, 3, 4);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(160, 160);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 24;
+            pictureBox4.TabStop = false;
             // 
             // Adress
             // 
-            this.Adress.AutoSize = true;
-            this.Adress.Location = new System.Drawing.Point(392, 271);
-            this.Adress.Name = "Adress";
-            this.Adress.Size = new System.Drawing.Size(113, 15);
-            this.Adress.TabIndex = 25;
-            this.Adress.Text = "3750 Tuxedo Rd NW";
+            Adress.AutoSize = true;
+            Adress.Location = new Point(448, 361);
+            Adress.Name = "Adress";
+            Adress.Size = new Size(145, 20);
+            Adress.TabIndex = 25;
+            Adress.Text = "3750 Tuxedo Rd NW";
             // 
             // Price
             // 
-            this.Price.AutoSize = true;
-            this.Price.Location = new System.Drawing.Point(636, 271);
-            this.Price.Name = "Price";
-            this.Price.Size = new System.Drawing.Size(61, 15);
-            this.Price.TabIndex = 26;
-            this.Price.Text = "$6,000,000";
+            Price.AutoSize = true;
+            Price.Location = new Point(727, 361);
+            Price.Name = "Price";
+            Price.Size = new Size(79, 20);
+            Price.TabIndex = 26;
+            Price.Text = "$6,000,000";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(69, 323);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 15);
-            this.label2.TabIndex = 28;
+            label2.AutoSize = true;
+            label2.Location = new Point(79, 431);
+            label2.Name = "label2";
+            label2.Size = new Size(0, 20);
+            label2.TabIndex = 28;
             // 
             // House
             // 
-            this.House.AutoSize = true;
-            this.House.Location = new System.Drawing.Point(46, 214);
-            this.House.Name = "House";
-            this.House.Size = new System.Drawing.Size(67, 15);
-            this.House.TabIndex = 29;
-            this.House.Text = "Description";
+            House.AutoSize = true;
+            House.Location = new Point(53, 285);
+            House.Name = "House";
+            House.Size = new Size(85, 20);
+            House.TabIndex = 29;
+            House.Text = "Description";
             // 
             // Description
             // 
-            this.Description.AutoSize = true;
-            this.Description.Location = new System.Drawing.Point(55, 323);
-            this.Description.Name = "Description";
-            this.Description.Size = new System.Drawing.Size(663, 15);
-            this.Description.TabIndex = 30;
-            this.Description.Text = "Step into the epitome of luxury living with this majestic brick estate nestled in" +
-    " the prestigious neighborhood of Tuxedo Park. ";
+            Description.AutoSize = true;
+            Description.Location = new Point(63, 431);
+            Description.Name = "Description";
+            Description.Size = new Size(831, 20);
+            Description.TabIndex = 30;
+            Description.Text = "Step into the epitome of luxury living with this majestic brick estate nestled in the prestigious neighborhood of Tuxedo Park. ";
             // 
             // HousePicture
             // 
-            this.HousePicture.Location = new System.Drawing.Point(493, 0);
-            this.HousePicture.Name = "HousePicture";
-            this.HousePicture.Size = new System.Drawing.Size(308, 204);
-            this.HousePicture.TabIndex = 31;
-            this.HousePicture.TabStop = false;
-            this.HousePicture.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            HousePicture.Location = new Point(563, 0);
+            HousePicture.Margin = new Padding(3, 4, 3, 4);
+            HousePicture.Name = "HousePicture";
+            HousePicture.Size = new Size(352, 272);
+            HousePicture.TabIndex = 31;
+            HousePicture.TabStop = false;
+            HousePicture.Click += pictureBox1_Click_1;
             // 
             // Form6
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(799, 450);
-            this.Controls.Add(this.HousePicture);
-            this.Controls.Add(this.Description);
-            this.Controls.Add(this.House);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.Price);
-            this.Controls.Add(this.Adress);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.Color);
-            this.Controls.Add(this.pictureBox3);
-            this.Name = "Form6";
-            this.Text = "Form6";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HousePicture)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(913, 600);
+            Controls.Add(HousePicture);
+            Controls.Add(Description);
+            Controls.Add(House);
+            Controls.Add(label2);
+            Controls.Add(Price);
+            Controls.Add(Adress);
+            Controls.Add(pictureBox4);
+            Controls.Add(button1);
+            Controls.Add(label4);
+            Controls.Add(Color);
+            Controls.Add(pictureBox3);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "Form6";
+            Text = "Form6";
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)HousePicture).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

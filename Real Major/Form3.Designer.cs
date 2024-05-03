@@ -29,194 +29,201 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.HouseInformation = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            countryComboBox = new ComboBox();
+            townComboBox = new ComboBox();
+            countryLabel = new Label();
+            townLabel = new Label();
+            houseLabel = new Label();
+            changeInfoButton = new Button();
+            backButton = new Button();
+            showButton = new Button();
+            houseComboBox = new ComboBox();
+            backgroundPictureBox = new PictureBox();
+            cityPictureBox = new PictureBox();
+            logoPictureBox = new PictureBox();
+            changeHouseInfoButton = new Button();
+            ((System.ComponentModel.ISupportInitialize)backgroundPictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)cityPictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logoPictureBox).BeginInit();
+            SuspendLayout();
             // 
-            // comboBox1
+            // countryComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(103, 235);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(128, 23);
-            this.comboBox1.TabIndex = 0;
+            countryComboBox.FormattingEnabled = true;
+            countryComboBox.Location = new Point(118, 313);
+            countryComboBox.Margin = new Padding(3, 4, 3, 4);
+            countryComboBox.Name = "countryComboBox";
+            countryComboBox.Size = new Size(146, 28);
+            countryComboBox.TabIndex = 0;
             // 
-            // comboBox2
+            // townComboBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(329, 235);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(128, 23);
-            this.comboBox2.TabIndex = 1;
+            townComboBox.FormattingEnabled = true;
+            townComboBox.Location = new Point(376, 313);
+            townComboBox.Margin = new Padding(3, 4, 3, 4);
+            townComboBox.Name = "townComboBox";
+            townComboBox.Size = new Size(146, 28);
+            townComboBox.TabIndex = 1;
             // 
-            // label1
+            // countryLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(134, 209);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 15);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Country:";
+            countryLabel.AutoSize = true;
+            countryLabel.BackColor = Color.WhiteSmoke;
+            countryLabel.Location = new Point(153, 279);
+            countryLabel.Name = "countryLabel";
+            countryLabel.Size = new Size(63, 20);
+            countryLabel.TabIndex = 3;
+            countryLabel.Text = "Country:";
             // 
-            // label2
+            // townLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(370, 209);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 15);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Town:";
+            townLabel.AutoSize = true;
+            townLabel.BackColor = Color.WhiteSmoke;
+            townLabel.Location = new Point(423, 279);
+            townLabel.Name = "townLabel";
+            townLabel.Size = new Size(47, 20);
+            townLabel.TabIndex = 4;
+            townLabel.Text = "Town:";
             // 
-            // label3
+            // houseLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(575, 209);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "House:";
+            houseLabel.AutoSize = true;
+            houseLabel.BackColor = Color.WhiteSmoke;
+            houseLabel.Location = new Point(657, 279);
+            houseLabel.Name = "houseLabel";
+            houseLabel.Size = new Size(54, 20);
+            houseLabel.TabIndex = 5;
+            houseLabel.Text = "House:";
             // 
-            // button1
+            // changeInfoButton
             // 
-            this.button1.Location = new System.Drawing.Point(318, 320);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 24);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Change Information";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            changeInfoButton.Location = new Point(363, 427);
+            changeInfoButton.Margin = new Padding(3, 4, 3, 4);
+            changeInfoButton.Name = "changeInfoButton";
+            changeInfoButton.Size = new Size(174, 32);
+            changeInfoButton.TabIndex = 4;
+            changeInfoButton.Text = "Change Information";
+            changeInfoButton.UseVisualStyleBackColor = true;
+            changeInfoButton.Click += changeInfoButton_Click;
             // 
-            // button2
+            // backButton
             // 
-            this.button2.Location = new System.Drawing.Point(59, 394);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            backButton.Location = new Point(67, 525);
+            backButton.Margin = new Padding(3, 4, 3, 4);
+            backButton.Name = "backButton";
+            backButton.Size = new Size(86, 31);
+            backButton.TabIndex = 6;
+            backButton.Text = "Back";
+            backButton.UseVisualStyleBackColor = true;
+            backButton.Click += backButton_Click;
             // 
-            // button3
+            // showButton
             // 
-            this.button3.Location = new System.Drawing.Point(318, 279);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(152, 25);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Show House";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            showButton.Location = new Point(363, 372);
+            showButton.Margin = new Padding(3, 4, 3, 4);
+            showButton.Name = "showButton";
+            showButton.Size = new Size(174, 33);
+            showButton.TabIndex = 3;
+            showButton.Text = "Show House";
+            showButton.UseVisualStyleBackColor = true;
+            showButton.Click += showButton_Click;
             // 
-            // comboBox3
+            // houseComboBox
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(547, 235);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(128, 23);
-            this.comboBox3.TabIndex = 2;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            houseComboBox.FormattingEnabled = true;
+            houseComboBox.Location = new Point(625, 313);
+            houseComboBox.Margin = new Padding(3, 4, 3, 4);
+            houseComboBox.Name = "houseComboBox";
+            houseComboBox.Size = new Size(146, 28);
+            houseComboBox.TabIndex = 2;
             // 
-            // pictureBox2
+            // backgroundPictureBox
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1, 188);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(804, 260);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 19;
-            this.pictureBox2.TabStop = false;
+            backgroundPictureBox.Image = (Image)resources.GetObject("backgroundPictureBox.Image");
+            backgroundPictureBox.Location = new Point(1, 251);
+            backgroundPictureBox.Margin = new Padding(2, 3, 2, 3);
+            backgroundPictureBox.Name = "backgroundPictureBox";
+            backgroundPictureBox.Size = new Size(919, 347);
+            backgroundPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            backgroundPictureBox.TabIndex = 19;
+            backgroundPictureBox.TabStop = false;
             // 
-            // pictureBox3
+            // cityPictureBox
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1, 1);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(808, 194);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 20;
-            this.pictureBox3.TabStop = false;
+            cityPictureBox.Image = (Image)resources.GetObject("cityPictureBox.Image");
+            cityPictureBox.Location = new Point(1, 1);
+            cityPictureBox.Margin = new Padding(2, 3, 2, 3);
+            cityPictureBox.Name = "cityPictureBox";
+            cityPictureBox.Size = new Size(923, 259);
+            cityPictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
+            cityPictureBox.TabIndex = 20;
+            cityPictureBox.TabStop = false;
             // 
-            // pictureBox1
+            // logoPictureBox
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(660, 329);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 120);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
+            logoPictureBox.Image = (Image)resources.GetObject("logoPictureBox.Image");
+            logoPictureBox.Location = new Point(754, 439);
+            logoPictureBox.Margin = new Padding(3, 4, 3, 4);
+            logoPictureBox.Name = "logoPictureBox";
+            logoPictureBox.Size = new Size(160, 160);
+            logoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            logoPictureBox.TabIndex = 21;
+            logoPictureBox.TabStop = false;
             // 
-            // HouseInformation
+            // changeHouseInfoButton
             // 
-            this.HouseInformation.Location = new System.Drawing.Point(318, 362);
-            this.HouseInformation.Name = "HouseInformation";
-            this.HouseInformation.Size = new System.Drawing.Size(152, 24);
-            this.HouseInformation.TabIndex = 22;
-            this.HouseInformation.Text = "Change House Information";
-            this.HouseInformation.UseVisualStyleBackColor = true;
-            this.HouseInformation.Click += new System.EventHandler(this.HouseInformation_Click);
+            changeHouseInfoButton.Location = new Point(363, 483);
+            changeHouseInfoButton.Margin = new Padding(3, 4, 3, 4);
+            changeHouseInfoButton.Name = "changeHouseInfoButton";
+            changeHouseInfoButton.Size = new Size(174, 32);
+            changeHouseInfoButton.TabIndex = 5;
+            changeHouseInfoButton.Text = "Change House Information";
+            changeHouseInfoButton.UseVisualStyleBackColor = true;
+            changeHouseInfoButton.Click += HouseInformation_Click;
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.HouseInformation);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox3);
-            this.Name = "Form3";
-            this.Text = "Form3";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(914, 600);
+            Controls.Add(changeHouseInfoButton);
+            Controls.Add(logoPictureBox);
+            Controls.Add(houseComboBox);
+            Controls.Add(countryLabel);
+            Controls.Add(countryComboBox);
+            Controls.Add(houseLabel);
+            Controls.Add(townLabel);
+            Controls.Add(townComboBox);
+            Controls.Add(showButton);
+            Controls.Add(changeInfoButton);
+            Controls.Add(backButton);
+            Controls.Add(backgroundPictureBox);
+            Controls.Add(cityPictureBox);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "Form3";
+            Text = "Form3";
+            ((System.ComponentModel.ISupportInitialize)backgroundPictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)cityPictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logoPictureBox).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private ComboBox comboBox3;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox1;
-        private Button HouseInformation;
+        private ComboBox countryComboBox;
+        private ComboBox townComboBox;
+        private Label countryLabel;
+        private Label townLabel;
+        private Label houseLabel;
+        private Button changeInfoButton;
+        private Button backButton;
+        private Button showButton;
+        private ComboBox houseComboBox;
+        private PictureBox backgroundPictureBox;
+        private PictureBox cityPictureBox;
+        private PictureBox logoPictureBox;
+        private Button changeHouseInfoButton;
     }
 }

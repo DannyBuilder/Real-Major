@@ -30,12 +30,7 @@ namespace Real_Major
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form3 forma3 = new Form3(user1);
-            forma3.Show();
-            this.Hide();
-        }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -54,10 +49,10 @@ namespace Real_Major
                     //SqlCommand cmd = new SqlCommand("INSERT INTO User_Profiles (picture, firstName, lastName, country, gender) VALUES(@picture, @firstname, @lastname, @country, @gender ) WHERE username = @username", con);
                     cmd.Parameters.AddWithValue("@house", house1);
                     cmd.Parameters.AddWithValue("@picture", pictureData);
-                    cmd.Parameters.AddWithValue("@Color", ColorTextBox.Text);
-                    cmd.Parameters.AddWithValue("@Adress", AdressTextBox.Text);
-                    cmd.Parameters.AddWithValue("@Price", PriceTextBox.Text);
-                    cmd.Parameters.AddWithValue("@Description", DescriptionTextBox.Text);
+                    cmd.Parameters.AddWithValue("@Color", colorTextBox.Text);
+                    cmd.Parameters.AddWithValue("@Adress", adressTextBox.Text);
+                    cmd.Parameters.AddWithValue("@Price", priceTextBox.Text);
+                    cmd.Parameters.AddWithValue("@Description", descriptionTextBox.Text);
                     cmd.ExecuteNonQuery();
                     con.Close();
                     pictureBox1.Image = selectedPicture;
@@ -90,6 +85,11 @@ namespace Real_Major
             }
         }
 
-
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Form3 forma3 = new Form3(user1);
+            forma3.Show();
+            this.Hide();
+        }
     }
 }

@@ -23,16 +23,10 @@ namespace Real_Major
             label.Text = "Country";
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Form3 forma3 = new Form3(user1);
-            forma3.Show();
-            this.Hide();
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Form5_Load(object sender, EventArgs e)
@@ -52,17 +46,17 @@ namespace Real_Major
                 if (townButton.Checked)
                 {
                     cmd = new SqlCommand("Delete from Towns Where Town_Name = @Town", con);
-                    cmd.Parameters.AddWithValue("@Town", countryBox.Text);
+                    cmd.Parameters.AddWithValue("@Town", currentNameBox.Text);
                 }
                 else if (countryButton.Checked)
                 {
                     cmd = new SqlCommand("Delete from Countries Where CountryName = @Country", con);
-                    cmd.Parameters.AddWithValue("@Country", countryBox.Text);
+                    cmd.Parameters.AddWithValue("@Country", currentNameBox.Text);
                 }
                 else
                 {
                     cmd = new SqlCommand("Delete from Offers Where House = @House", con);
-                    cmd.Parameters.AddWithValue("@House", countryBox.Text);
+                    cmd.Parameters.AddWithValue("@House", currentNameBox.Text);
                 }
 
                 cmd.ExecuteNonQuery();
@@ -113,7 +107,7 @@ namespace Real_Major
         {
             if (townButton.Checked)
             {
-                if (!string.IsNullOrWhiteSpace(countryBox.Text) && !string.IsNullOrWhiteSpace(newCountryBox.Text))
+                if (!string.IsNullOrWhiteSpace(currentNameBox.Text) && !string.IsNullOrWhiteSpace(updateBox.Text))
                 {
                     try
                     {
@@ -121,8 +115,8 @@ namespace Real_Major
                         {
                             using (SqlCommand cmd = new SqlCommand("UPDATE Towns SET Town_Name = @city WHERE Town_Name = @replacedCity", con))
                             {
-                                cmd.Parameters.AddWithValue("@city", newCountryBox.Text);
-                                cmd.Parameters.AddWithValue("@replacedCity", countryBox.Text);
+                                cmd.Parameters.AddWithValue("@city", updateBox.Text);
+                                cmd.Parameters.AddWithValue("@replacedCity", currentNameBox.Text);
                                 con.Open();
                                 int rowsAffected = cmd.ExecuteNonQuery();
                                 con.Close();
@@ -130,8 +124,8 @@ namespace Real_Major
                                 if (rowsAffected > 0)
                                 {
                                     MessageBox.Show("Town updated successfully");
-                                    countryBox.Clear();
-                                    newCountryBox.Clear();
+                                    currentNameBox.Clear();
+                                    updateBox.Clear();
                                 }
                                 else
                                 {
@@ -157,7 +151,7 @@ namespace Real_Major
             }
             else if (countryButton.Checked)
             {
-                if (!string.IsNullOrWhiteSpace(countryBox.Text) && !string.IsNullOrWhiteSpace(newCountryBox.Text))
+                if (!string.IsNullOrWhiteSpace(currentNameBox.Text) && !string.IsNullOrWhiteSpace(updateBox.Text))
                 {
                     try
                     {
@@ -165,8 +159,8 @@ namespace Real_Major
                         {
                             using (SqlCommand cmd = new SqlCommand("UPDATE Countries SET CountryName = @city WHERE CountryName = @replacedCity", con))
                             {
-                                cmd.Parameters.AddWithValue("@city", newCountryBox.Text);
-                                cmd.Parameters.AddWithValue("@replacedCity", countryBox.Text);
+                                cmd.Parameters.AddWithValue("@city", updateBox.Text);
+                                cmd.Parameters.AddWithValue("@replacedCity", currentNameBox.Text);
                                 con.Open();
                                 int rowsAffected = cmd.ExecuteNonQuery();
                                 con.Close();
@@ -174,8 +168,8 @@ namespace Real_Major
                                 if (rowsAffected > 0)
                                 {
                                     MessageBox.Show("Country updated successfully");
-                                    countryBox.Clear();
-                                    newCountryBox.Clear();
+                                    currentNameBox.Clear();
+                                    updateBox.Clear();
                                 }
                                 else
                                 {
@@ -199,8 +193,9 @@ namespace Real_Major
                     MessageBox.Show("Please enter valid country names");
                 }
             }
-            else {
-                if (!string.IsNullOrWhiteSpace(countryBox.Text) && !string.IsNullOrWhiteSpace(newCountryBox.Text))
+            else
+            {
+                if (!string.IsNullOrWhiteSpace(currentNameBox.Text) && !string.IsNullOrWhiteSpace(updateBox.Text))
                 {
                     try
                     {
@@ -208,8 +203,8 @@ namespace Real_Major
                         {
                             using (SqlCommand cmd = new SqlCommand("UPDATE Offers SET House = @city WHERE House = @replacedCity", con))
                             {
-                                cmd.Parameters.AddWithValue("@city", newCountryBox.Text);
-                                cmd.Parameters.AddWithValue("@replacedCity", countryBox.Text);
+                                cmd.Parameters.AddWithValue("@city", updateBox.Text);
+                                cmd.Parameters.AddWithValue("@replacedCity", currentNameBox.Text);
                                 con.Open();
                                 int rowsAffected = cmd.ExecuteNonQuery();
                                 con.Close();
@@ -217,8 +212,8 @@ namespace Real_Major
                                 if (rowsAffected > 0)
                                 {
                                     MessageBox.Show("House offer updated successfully");
-                                    countryBox.Clear();
-                                    newCountryBox.Clear();
+                                    currentNameBox.Clear();
+                                    updateBox.Clear();
                                 }
                                 else
                                 {
@@ -257,17 +252,17 @@ namespace Real_Major
                 if (townButton.Checked)
                 {
                     cmd = new SqlCommand("INSERT INTO Towns (Town_Name) VALUES(@Town)", con);
-                    cmd.Parameters.AddWithValue("@Town", countryBox.Text);
+                    cmd.Parameters.AddWithValue("@Town", currentNameBox.Text);
                 }
                 else if (countryButton.Checked)
                 {
                     cmd = new SqlCommand("INSERT INTO Countries (CountryName) VALUES(@Country)", con);
-                    cmd.Parameters.AddWithValue("@Country", countryBox.Text);
+                    cmd.Parameters.AddWithValue("@Country", currentNameBox.Text);
                 }
                 else
                 {
                     cmd = new SqlCommand("INSERT INTO Offers (House) VALUES(@House)", con);
-                    cmd.Parameters.AddWithValue("@House", countryBox.Text);
+                    cmd.Parameters.AddWithValue("@House", currentNameBox.Text);
                 }
 
                 cmd.ExecuteNonQuery();
@@ -285,7 +280,17 @@ namespace Real_Major
             }
         }
 
+        private void Form5_Load_1(object sender, EventArgs e)
+        {
 
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            Form3 forma3 = new Form3(user1);
+            forma3.Show();
+            this.Hide();
+        }
     }
 }
 

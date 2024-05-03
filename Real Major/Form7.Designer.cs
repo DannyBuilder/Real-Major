@@ -28,151 +28,157 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label4 = new System.Windows.Forms.Label();
-            this.Price = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.DescriptionTextBox = new System.Windows.Forms.TextBox();
-            this.PriceTextBox = new System.Windows.Forms.TextBox();
-            this.AdressTextBox = new System.Windows.Forms.TextBox();
-            this.ColorTextBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            descriptionLabel = new Label();
+            priceLabel = new Label();
+            adressLabel = new Label();
+            colorLabel = new Label();
+            descriptionTextBox = new TextBox();
+            priceTextBox = new TextBox();
+            adressTextBox = new TextBox();
+            colorTextBox = new TextBox();
+            pictureBox1 = new PictureBox();
+            button2 = new Button();
+            backButton = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
-            // label4
+            // descriptionLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(367, 214);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 15);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Description:";
+            descriptionLabel.AutoSize = true;
+            descriptionLabel.Location = new Point(419, 285);
+            descriptionLabel.Name = "descriptionLabel";
+            descriptionLabel.Size = new Size(88, 20);
+            descriptionLabel.TabIndex = 22;
+            descriptionLabel.Text = "Description:";
             // 
-            // Price
+            // priceLabel
             // 
-            this.Price.AutoSize = true;
-            this.Price.Location = new System.Drawing.Point(412, 46);
-            this.Price.Name = "Price";
-            this.Price.Size = new System.Drawing.Size(36, 15);
-            this.Price.TabIndex = 21;
-            this.Price.Text = "Price:";
+            priceLabel.AutoSize = true;
+            priceLabel.Location = new Point(471, 61);
+            priceLabel.Name = "priceLabel";
+            priceLabel.Size = new Size(44, 20);
+            priceLabel.TabIndex = 21;
+            priceLabel.Text = "Price:";
             // 
-            // label2
+            // adressLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(261, 46);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 15);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Address:";
+            adressLabel.AutoSize = true;
+            adressLabel.Location = new Point(298, 61);
+            adressLabel.Name = "adressLabel";
+            adressLabel.Size = new Size(65, 20);
+            adressLabel.TabIndex = 20;
+            adressLabel.Text = "Address:";
             // 
-            // label1
+            // colorLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(86, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 15);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Color:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            colorLabel.AutoSize = true;
+            colorLabel.Location = new Point(98, 61);
+            colorLabel.Name = "colorLabel";
+            colorLabel.Size = new Size(48, 20);
+            colorLabel.TabIndex = 19;
+            colorLabel.Text = "Color:";
+            colorLabel.Click += label1_Click;
             // 
-            // DescriptionTextBox
+            // descriptionTextBox
             // 
-            this.DescriptionTextBox.Location = new System.Drawing.Point(367, 232);
-            this.DescriptionTextBox.Name = "DescriptionTextBox";
-            this.DescriptionTextBox.Size = new System.Drawing.Size(336, 23);
-            this.DescriptionTextBox.TabIndex = 18;
+            descriptionTextBox.Location = new Point(419, 309);
+            descriptionTextBox.Margin = new Padding(3, 4, 3, 4);
+            descriptionTextBox.Name = "descriptionTextBox";
+            descriptionTextBox.Size = new Size(383, 27);
+            descriptionTextBox.TabIndex = 18;
             // 
-            // PriceTextBox
+            // priceTextBox
             // 
-            this.PriceTextBox.Location = new System.Drawing.Point(412, 64);
-            this.PriceTextBox.Name = "PriceTextBox";
-            this.PriceTextBox.Size = new System.Drawing.Size(100, 23);
-            this.PriceTextBox.TabIndex = 17;
+            priceTextBox.Location = new Point(471, 85);
+            priceTextBox.Margin = new Padding(3, 4, 3, 4);
+            priceTextBox.Name = "priceTextBox";
+            priceTextBox.Size = new Size(114, 27);
+            priceTextBox.TabIndex = 17;
             // 
-            // AdressTextBox
+            // adressTextBox
             // 
-            this.AdressTextBox.Location = new System.Drawing.Point(261, 64);
-            this.AdressTextBox.Name = "AdressTextBox";
-            this.AdressTextBox.Size = new System.Drawing.Size(100, 23);
-            this.AdressTextBox.TabIndex = 16;
+            adressTextBox.Location = new Point(298, 85);
+            adressTextBox.Margin = new Padding(3, 4, 3, 4);
+            adressTextBox.Name = "adressTextBox";
+            adressTextBox.Size = new Size(114, 27);
+            adressTextBox.TabIndex = 16;
             // 
-            // ColorTextBox
+            // colorTextBox
             // 
-            this.ColorTextBox.Location = new System.Drawing.Point(86, 64);
-            this.ColorTextBox.Name = "ColorTextBox";
-            this.ColorTextBox.Size = new System.Drawing.Size(100, 23);
-            this.ColorTextBox.TabIndex = 15;
+            colorTextBox.Location = new Point(98, 85);
+            colorTextBox.Margin = new Padding(3, 4, 3, 4);
+            colorTextBox.Name = "colorTextBox";
+            colorTextBox.Size = new Size(114, 27);
+            colorTextBox.TabIndex = 15;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(86, 182);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(152, 127);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            //this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            pictureBox1.Location = new Point(98, 243);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(174, 169);
+            pictureBox1.TabIndex = 14;
+            pictureBox1.TabStop = false;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(86, 144);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(152, 21);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Upload Picture";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.Location = new Point(98, 192);
+            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Name = "button2";
+            button2.Size = new Size(174, 28);
+            button2.TabIndex = 13;
+            button2.Text = "Upload Picture";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
-            // button1
+            // backButton
             // 
-            this.button1.Location = new System.Drawing.Point(86, 374);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 28);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            backButton.Location = new Point(98, 499);
+            backButton.Margin = new Padding(3, 4, 3, 4);
+            backButton.Name = "backButton";
+            backButton.Size = new Size(96, 37);
+            backButton.TabIndex = 12;
+            backButton.Text = "Back";
+            backButton.UseVisualStyleBackColor = true;
+            backButton.Click += backButton_Click;
             // 
             // Form7
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.Price);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.DescriptionTextBox);
-            this.Controls.Add(this.PriceTextBox);
-            this.Controls.Add(this.AdressTextBox);
-            this.Controls.Add(this.ColorTextBox);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Name = "Form7";
-            this.Text = "Form7";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(914, 600);
+            Controls.Add(descriptionLabel);
+            Controls.Add(priceLabel);
+            Controls.Add(adressLabel);
+            Controls.Add(colorLabel);
+            Controls.Add(descriptionTextBox);
+            Controls.Add(priceTextBox);
+            Controls.Add(adressTextBox);
+            Controls.Add(colorTextBox);
+            Controls.Add(pictureBox1);
+            Controls.Add(button2);
+            Controls.Add(backButton);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "Form7";
+            Text = "Form7";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Label label4;
-        private Label Price;
-        private Label label2;
-        private Label label1;
-        private TextBox DescriptionTextBox;
-        private TextBox PriceTextBox;
-        private TextBox AdressTextBox;
-        private TextBox ColorTextBox;
+        private Label descriptionLabel;
+        private Label priceLabel;
+        private Label adressLabel;
+        private Label colorLabel;
+        private TextBox descriptionTextBox;
+        private TextBox priceTextBox;
+        private TextBox adressTextBox;
+        private TextBox colorTextBox;
         private PictureBox pictureBox1;
         private Button button2;
-        private Button button1;
+        private Button backButton;
     }
 }

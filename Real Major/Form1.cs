@@ -47,7 +47,7 @@ namespace Real_Major
             string pass;
             string data;
             string connectionString = @"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True";
-                        
+
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -106,7 +106,8 @@ namespace Real_Major
                     MessageBox.Show("There was an error with the SQL Server! Please try again!");
 
                 }
-                catch(Exception ex) {
+                catch (Exception ex)
+                {
                     MessageBox.Show("There was an error! Please try again!");
                 }
 
@@ -122,7 +123,7 @@ namespace Real_Major
                 var hash = hashAlgorithm.ComputeHash(bytes);
                 return Convert.ToBase64String(hash);
             }
-             
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -167,5 +168,9 @@ namespace Real_Major
             }
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
