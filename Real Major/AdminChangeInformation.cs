@@ -40,7 +40,7 @@ namespace Real_Major
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True";
+            string connectionString = @"Data Source=DESKTOP-UUN906P;Initial Catalog=House_Offers;Integrated Security=True";
             try
             {
                 SqlConnection con = new SqlConnection(connectionString);
@@ -246,7 +246,7 @@ namespace Real_Major
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=OFFICE-30637054\SQLEXPRESS;Initial Catalog= House_Offers;Integrated Security=True";
+            string connectionString = @"Data Source=DESKTOP-UUN906P;Initial Catalog=House_Offers;Integrated Security=True";
             try
             {
                 SqlConnection con = new SqlConnection(connectionString);

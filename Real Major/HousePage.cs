@@ -111,10 +111,10 @@ namespace Real_Major
             }
         }
 
-        
+
         private void ShowHouse_Click(object sender, EventArgs e)
         {
-            timer1.Enabled = true; 
+            timer1.Enabled = true;
 
         }
 
@@ -132,6 +132,11 @@ namespace Real_Major
         }
 
         private void Adress_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
 
         }

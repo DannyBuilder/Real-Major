@@ -46,7 +46,7 @@ namespace Real_Major
             string password = passBox.Text;
             string pass;
             string data;
-            string connectionString = @"Data Source=OFFICE-30637054\SQLEXPRESS;Initial Catalog= House_Offers;Integrated Security=True";
+            string connectionString = @"Data Source=DESKTOP-UUN906P;Initial Catalog=House_Offers;Integrated Security=True";
 
 
             using (SqlConnection con = new SqlConnection(connectionString))

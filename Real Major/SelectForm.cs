@@ -200,5 +200,10 @@ namespace Real_Major
         {
             button1.Enabled = true;
         }
+
+        private void pictureBox2_Click_2(object sender, EventArgs e)
+        {
+
+        }
     }
 }

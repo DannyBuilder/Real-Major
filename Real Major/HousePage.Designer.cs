@@ -70,7 +70,6 @@
             label4.Size = new Size(316, 66);
             label4.TabIndex = 15;
             label4.Text = "Cartier Estate";
-            
             // 
             // button1
             // 
@@ -93,6 +92,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 20;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // pictureBox4
             // 
@@ -150,7 +150,6 @@
             Description.Size = new Size(268, 128);
             Description.TabIndex = 30;
             Description.Text = "Step into the epitome of luxury living with this majestic brick estate nestled in the prestigious neighborhood of Tuxedo Park. ";
-            
             // 
             // HousePicture
             // 
@@ -161,7 +160,6 @@
             HousePicture.SizeMode = PictureBoxSizeMode.StretchImage;
             HousePicture.TabIndex = 31;
             HousePicture.TabStop = false;
-            
             // 
             // label1
             // 
