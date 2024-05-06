@@ -1,6 +1,6 @@
 ﻿namespace Real_Major
 {
-    partial class Form2
+    partial class SignUpForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpForm));
             passwordBox = new TextBox();
             usernameTextBox = new TextBox();
             passwordBox2 = new TextBox();
@@ -174,7 +174,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe Script", 29F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label1.Location = new Point(27, 21);
+            label1.Location = new Point(12, 21);
             label1.Name = "label1";
             label1.Size = new Size(397, 81);
             label1.TabIndex = 25;

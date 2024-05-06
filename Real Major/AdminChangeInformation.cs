@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.Devices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +13,18 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Real_Major
 {
-    public partial class Form5 : Form
+    public partial class AdminChangeInformation : Form
     {
         UserClass user1;
-        public Form5(UserClass user)
+        public AdminChangeInformation(UserClass user)
         {
             user1 = user;
             InitializeComponent();
             countryButton.Checked = true;
             label.Text = "Country";
+
+
+
         }
 
 
@@ -111,7 +115,7 @@ namespace Real_Major
                 {
                     try
                     {
-                        using (SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True"))
+                        using (SqlConnection con = new SqlConnection(@"Data Source=OFFICE-30637054\SQLEXPRESS;Initial Catalog= House_Offers;Integrated Security=True"))
                         {
                             using (SqlCommand cmd = new SqlCommand("UPDATE Towns SET Town_Name = @city WHERE Town_Name = @replacedCity", con))
                             {
@@ -155,7 +159,7 @@ namespace Real_Major
                 {
                     try
                     {
-                        using (SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True"))
+                        using (SqlConnection con = new SqlConnection(@"Data Source=OFFICE-30637054\SQLEXPRESS;Initial Catalog= House_Offers;Integrated Security=True"))
                         {
                             using (SqlCommand cmd = new SqlCommand("UPDATE Countries SET CountryName = @city WHERE CountryName = @replacedCity", con))
                             {
@@ -199,7 +203,7 @@ namespace Real_Major
                 {
                     try
                     {
-                        using (SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True"))
+                        using (SqlConnection con = new SqlConnection(@"Data Source=OFFICE-30637054\SQLEXPRESS;Initial Catalog= House_Offers;Integrated Security=True"))
                         {
                             using (SqlCommand cmd = new SqlCommand("UPDATE Offers SET House = @city WHERE House = @replacedCity", con))
                             {
@@ -242,7 +246,7 @@ namespace Real_Major
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True";
+            string connectionString = @"Data Source=OFFICE-30637054\SQLEXPRESS;Initial Catalog= House_Offers;Integrated Security=True";
             try
             {
                 SqlConnection con = new SqlConnection(connectionString);
@@ -287,9 +291,19 @@ namespace Real_Major
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            Form3 forma3 = new Form3(user1);
+            AdminSelectForm forma3 = new AdminSelectForm(user1);
             forma3.Show();
             this.Hide();
+        }
+
+        private void logoLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backgroundPictureBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

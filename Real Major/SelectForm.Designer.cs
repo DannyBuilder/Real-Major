@@ -1,6 +1,6 @@
 ﻿namespace Real_Major
 {
-    partial class Form4
+    partial class SelectForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectForm));
             button1 = new Button();
             label3 = new Label();
             label2 = new Label();
@@ -95,6 +95,7 @@
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(146, 28);
             comboBox3.TabIndex = 2;
+            comboBox3.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
             // 
             // comboBox2
             // 
@@ -104,6 +105,7 @@
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(146, 28);
             comboBox2.TabIndex = 1;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // comboBox1
             // 
@@ -113,6 +115,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(146, 28);
             comboBox1.TabIndex = 0;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label4
             // 
@@ -168,7 +171,7 @@
             pictureBox4.TabIndex = 23;
             pictureBox4.TabStop = false;
             // 
-            // Form4
+            // SelectForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -187,7 +190,7 @@
             Controls.Add(comboBox1);
             Controls.Add(pictureBox2);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "Form4";
+            Name = "SelectForm";
             Text = "Form4";
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

@@ -1,6 +1,6 @@
 ﻿namespace Real_Major
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             SignUpButton = new Button();
             dontHaveLabel = new Label();
             LoginButton = new Button();
@@ -98,13 +98,14 @@
             usernameBox.Name = "usernameBox";
             usernameBox.Size = new Size(153, 27);
             usernameBox.TabIndex = 0;
+            usernameBox.TextChanged += usernameBox_TextChanged;
             // 
             // logoLabel
             // 
             logoLabel.AutoSize = true;
             logoLabel.BackColor = Color.Transparent;
             logoLabel.Font = new Font("Segoe Script", 29F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            logoLabel.Location = new Point(27, 21);
+            logoLabel.Location = new Point(12, 21);
             logoLabel.Name = "logoLabel";
             logoLabel.Size = new Size(397, 81);
             logoLabel.TabIndex = 14;

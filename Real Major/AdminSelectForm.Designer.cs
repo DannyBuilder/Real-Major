@@ -1,6 +1,6 @@
 ﻿namespace Real_Major
 {
-    partial class Form3
+    partial class AdminSelectForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminSelectForm));
             countryComboBox = new ComboBox();
             townComboBox = new ComboBox();
             countryLabel = new Label();
@@ -64,6 +64,7 @@
             townComboBox.Name = "townComboBox";
             townComboBox.Size = new Size(146, 28);
             townComboBox.TabIndex = 1;
+            townComboBox.SelectedIndexChanged += townComboBox_SelectedIndexChanged;
             // 
             // countryLabel
             // 
@@ -136,6 +137,7 @@
             houseComboBox.Name = "houseComboBox";
             houseComboBox.Size = new Size(146, 28);
             houseComboBox.TabIndex = 2;
+            houseComboBox.SelectedIndexChanged += houseComboBox_SelectedIndexChanged;
             // 
             // backgroundPictureBox
             // 
@@ -181,7 +183,7 @@
             changeHouseInfoButton.UseVisualStyleBackColor = true;
             changeHouseInfoButton.Click += HouseInformation_Click;
             // 
-            // Form3
+            // AdminSelectForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -201,7 +203,7 @@
             Controls.Add(backgroundPictureBox);
             Controls.Add(cityPictureBox);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "Form3";
+            Name = "AdminSelectForm";
             Text = "Form3";
             ((System.ComponentModel.ISupportInitialize)backgroundPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)cityPictureBox).EndInit();

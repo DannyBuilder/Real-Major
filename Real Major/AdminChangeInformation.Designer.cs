@@ -1,6 +1,6 @@
 ﻿namespace Real_Major
 {
-    partial class Form5
+    partial class AdminChangeInformation
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminChangeInformation));
             label1 = new Label();
             addButton = new Button();
             deleteButton = new Button();
-            logoLabel = new Label();
-            logoPictureBox = new PictureBox();
             backButton = new Button();
             updateButton = new Button();
             label = new Label();
@@ -43,7 +41,10 @@
             houseButton = new RadioButton();
             updateBox = new TextBox();
             updateLabel = new Label();
-            ((System.ComponentModel.ISupportInitialize)logoPictureBox).BeginInit();
+            logoLabel = new Label();
+            label2 = new Label();
+            backgroundPictureBox = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)backgroundPictureBox).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -76,30 +77,9 @@
             deleteButton.UseVisualStyleBackColor = true;
             deleteButton.Click += deleteButton_Click;
             // 
-            // logoLabel
-            // 
-            logoLabel.AutoSize = true;
-            logoLabel.Font = new Font("Segoe UI", 29F, FontStyle.Regular, GraphicsUnit.Point);
-            logoLabel.Location = new Point(295, 25);
-            logoLabel.Name = "logoLabel";
-            logoLabel.Size = new Size(316, 66);
-            logoLabel.TabIndex = 15;
-            logoLabel.Text = "Cartier Estate";
-            // 
-            // logoPictureBox
-            // 
-            logoPictureBox.Image = (Image)resources.GetObject("logoPictureBox.Image");
-            logoPictureBox.Location = new Point(769, -1);
-            logoPictureBox.Margin = new Padding(3, 4, 3, 4);
-            logoPictureBox.Name = "logoPictureBox";
-            logoPictureBox.Size = new Size(146, 160);
-            logoPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            logoPictureBox.TabIndex = 16;
-            logoPictureBox.TabStop = false;
-            // 
             // backButton
             // 
-            backButton.Location = new Point(85, 501);
+            backButton.Location = new Point(26, 490);
             backButton.Margin = new Padding(3, 4, 3, 4);
             backButton.Name = "backButton";
             backButton.Size = new Size(102, 41);
@@ -122,12 +102,13 @@
             // label
             // 
             label.AutoSize = true;
+            label.BackColor = Color.WhiteSmoke;
             label.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label.Location = new Point(285, 168);
             label.Name = "label";
-            label.Size = new Size(88, 20);
+            label.Size = new Size(87, 20);
             label.TabIndex = 19;
-            label.Text = "placeholder";
+            label.Text = "Placeholder";
             // 
             // currentNameBox
             // 
@@ -140,37 +121,40 @@
             // countryButton
             // 
             countryButton.AutoSize = true;
+            countryButton.BackColor = Color.WhiteSmoke;
             countryButton.Location = new Point(251, 292);
             countryButton.Name = "countryButton";
             countryButton.Size = new Size(81, 24);
             countryButton.TabIndex = 2;
             countryButton.TabStop = true;
             countryButton.Text = "Country";
-            countryButton.UseVisualStyleBackColor = true;
+            countryButton.UseVisualStyleBackColor = false;
             countryButton.CheckedChanged += countryButton_CheckedChanged;
             // 
             // townButton
             // 
             townButton.AutoSize = true;
+            townButton.BackColor = Color.WhiteSmoke;
             townButton.Location = new Point(403, 292);
             townButton.Name = "townButton";
             townButton.Size = new Size(65, 24);
             townButton.TabIndex = 3;
             townButton.TabStop = true;
             townButton.Text = "Town";
-            townButton.UseVisualStyleBackColor = true;
+            townButton.UseVisualStyleBackColor = false;
             townButton.CheckedChanged += townButton_CheckedChanged;
             // 
             // houseButton
             // 
             houseButton.AutoSize = true;
+            houseButton.BackColor = Color.WhiteSmoke;
             houseButton.Location = new Point(543, 292);
             houseButton.Name = "houseButton";
             houseButton.Size = new Size(72, 24);
             houseButton.TabIndex = 4;
             houseButton.TabStop = true;
             houseButton.Text = "House";
-            houseButton.UseVisualStyleBackColor = true;
+            houseButton.UseVisualStyleBackColor = false;
             houseButton.CheckedChanged += houseButton_CheckedChanged;
             // 
             // updateBox
@@ -184,6 +168,7 @@
             // updateLabel
             // 
             updateLabel.AutoSize = true;
+            updateLabel.BackColor = Color.WhiteSmoke;
             updateLabel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             updateLabel.Location = new Point(285, 226);
             updateLabel.Name = "updateLabel";
@@ -191,12 +176,47 @@
             updateLabel.TabIndex = 24;
             updateLabel.Text = "Update to";
             // 
+            // logoLabel
+            // 
+            logoLabel.AutoSize = true;
+            logoLabel.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            logoLabel.Location = new Point(343, 70);
+            logoLabel.Name = "logoLabel";
+            logoLabel.Size = new Size(200, 46);
+            logoLabel.TabIndex = 15;
+            logoLabel.Text = "Admin Page";
+            logoLabel.Click += logoLabel_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe Script", 29F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label2.Location = new Point(242, -1);
+            label2.Name = "label2";
+            label2.Size = new Size(397, 81);
+            label2.TabIndex = 25;
+            label2.Text = "Cartier Estate";
+            // 
+            // backgroundPictureBox
+            // 
+            backgroundPictureBox.Image = (Image)resources.GetObject("backgroundPictureBox.Image");
+            backgroundPictureBox.Location = new Point(187, 119);
+            backgroundPictureBox.Margin = new Padding(2, 3, 2, 3);
+            backgroundPictureBox.Name = "backgroundPictureBox";
+            backgroundPictureBox.Size = new Size(503, 364);
+            backgroundPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            backgroundPictureBox.TabIndex = 26;
+            backgroundPictureBox.TabStop = false;
+            backgroundPictureBox.Click += backgroundPictureBox_Click;
+            // 
             // Form5
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(917, 544);
+            Controls.Add(label2);
             Controls.Add(updateBox);
             Controls.Add(updateLabel);
             Controls.Add(houseButton);
@@ -206,17 +226,17 @@
             Controls.Add(label);
             Controls.Add(updateButton);
             Controls.Add(backButton);
-            Controls.Add(logoPictureBox);
             Controls.Add(logoLabel);
             Controls.Add(deleteButton);
             Controls.Add(addButton);
             Controls.Add(label1);
+            Controls.Add(backgroundPictureBox);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form5";
             Text = "Form5";
             Load += Form5_Load_1;
-            ((System.ComponentModel.ISupportInitialize)logoPictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)backgroundPictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -227,11 +247,8 @@
         private Button addButton;
         private Button deleteButton;
         private TextBox townBox;
-        private Label label3;
         private Label label4;
         private TextBox houseBox;
-        private Label logoLabel;
-        private PictureBox logoPictureBox;
         private Button backButton;
         private Button updateButton;
         private Label label;
@@ -241,5 +258,8 @@
         private RadioButton houseButton;
         private TextBox updateBox;
         private Label updateLabel;
+        private Label logoLabel;
+        private Label label2;
+        private PictureBox backgroundPictureBox;
     }
 }

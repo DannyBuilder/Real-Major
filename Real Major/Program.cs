@@ -12,7 +12,7 @@ namespace Real_Major
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             
-            Application.Run(new Form8());
+            Application.Run(new LoginForm());
         }
     }
 }

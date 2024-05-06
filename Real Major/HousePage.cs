@@ -14,11 +14,11 @@ using System.Windows.Forms;
 
 namespace Real_Major
 {
-    public partial class Form6 : Form
+    public partial class HousePage : Form
     {
         UserClass user1;
         string house1;
-        public Form6(UserClass user, string house)
+        public HousePage(UserClass user, string house)
         {
             user1 = user;
             house1 = house;
@@ -27,7 +27,7 @@ namespace Real_Major
 
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=OFFICE-30637054\SQLEXPRESS;Initial Catalog= House_Offers;Integrated Security=True");
                 con.Open();
                 SqlCommand cmd = new SqlCommand("SELECT Color, Adress, Price, Description_, Town, photo FROM Offers WHERE House = @house", con);
                 cmd.Parameters.AddWithValue("@house", house1);
@@ -83,13 +83,13 @@ namespace Real_Major
         {
             if (user1.roleID == 2)
             {
-                Form3 forma3 = new Form3(user1);
+                AdminSelectForm forma3 = new AdminSelectForm(user1);
                 forma3.Show();
                 this.Hide();
             }
             else
             {
-                Form4 forma4 = new Form4(user1);
+                SelectForm forma4 = new SelectForm(user1);
                 forma4.Show();
                 this.Hide();
             }
@@ -111,27 +111,27 @@ namespace Real_Major
             }
         }
 
-        private void Form6_Load(object sender, EventArgs e)
+        
+        private void ShowHouse_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = true; 
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (HousePicture.Left <= 490)
+            {
+                HousePicture.Left = HousePicture.Left + 10;
+            }
+        }
+
+        private void Color_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
+        private void Adress_Click(object sender, EventArgs e)
         {
 
         }

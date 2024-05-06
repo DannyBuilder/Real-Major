@@ -14,9 +14,9 @@ using System.Windows.Forms;
 
 namespace Real_Major
 {
-    public partial class Form2 : Form
+    public partial class SignUpForm : Form
     {
-        public Form2()
+        public SignUpForm()
         {
             InitializeComponent();
             errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
@@ -72,7 +72,7 @@ namespace Real_Major
                 string password = passwordBox.Text;
                 string hashedpass = hashpassword($"{password}{salt}");
                 MessageBox.Show(hashedpass);
-                SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-ETJDNTM;Initial Catalog=House_Offers;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=OFFICE-30637054\SQLEXPRESS;Initial Catalog=House_Offers;Integrated Security=True");
                 con.Open();
                 SqlCommand cmd = new SqlCommand("INSERT INTO UserProfile (Username, pass, date_) VALUES (@username, @hashedpass, @salt)", con);
                 cmd.Parameters.AddWithValue("@username", usernameTextBox.Text);
@@ -103,7 +103,7 @@ namespace Real_Major
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 forma1 = new Form1();
+            LoginForm forma1 = new LoginForm();
             forma1.Show();
             this.Hide();
         }
@@ -186,7 +186,7 @@ namespace Real_Major
                 string password = passwordBox.Text;
                 string hashedpass = hashpassword($"{password}{salt}");
                 MessageBox.Show(hashedpass);
-                SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-ETJDNTM;Initial Catalog=House_Offers;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=OFFICE-30637054\SQLEXPRESS;Initial Catalog=House_Offers;Integrated Security=True");
                 try
                 {
                     con.Open();
@@ -217,7 +217,7 @@ namespace Real_Major
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Form1 forma1 = new Form1();
+            LoginForm forma1 = new LoginForm();
             forma1.Show();
             this.Hide();
         }

@@ -14,7 +14,7 @@ namespace Real_Major
 {
     public partial class Form8 : Form
     {
-        private string connectionString = @"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True";
+        private string connectionString = @"Data Source=OFFICE-30637054\SQLEXPRESS;Initial Catalog= House_Offers;Integrated Security=True";
         private DataTable resultTable;
         private int count;
         public Form8()
@@ -51,6 +51,11 @@ namespace Real_Major
                     MessageBox.Show($"Unknown error occured. Please try again. {ex.Message}");
                 }
             }
+        }
+
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

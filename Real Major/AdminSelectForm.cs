@@ -14,16 +14,19 @@ using System.Windows.Forms;
 
 namespace Real_Major
 {
-    public partial class Form3 : Form
+    public partial class AdminSelectForm : Form
     {
         UserClass user1;
-        public Form3(UserClass user)
+        public AdminSelectForm(UserClass user)
         {
             user1 = user;
             InitializeComponent();
             PopulateCountriesComboBox();
             PopulateTownsComboBox();
             PopulateOffersComboBox();
+            showButton.Enabled= false;  
+            changeHouseInfoButton.Enabled= false;   
+            changeInfoButton.Enabled= false;  
         }
 
 
@@ -31,7 +34,7 @@ namespace Real_Major
         {
             try
             {
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection(@"Data Source=OFFICE-30637054\SQLEXPRESS;Initial Catalog= House_Offers;Integrated Security=True"))
                 {
                     string query = "SELECT CountryName FROM Countries";
                     using (SqlCommand command = new SqlCommand(query, connection))
@@ -60,7 +63,7 @@ namespace Real_Major
         {
             try
             {
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection(@"Data Source=OFFICE-30637054\SQLEXPRESS;Initial Catalog= House_Offers;Integrated Security=True"))
                 {
                     string query = "SELECT Town_Name FROM Towns";
                     using (SqlCommand command = new SqlCommand(query, connection))
@@ -89,7 +92,7 @@ namespace Real_Major
         {
             try
             {
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection(@"Data Source=OFFICE-30637054\SQLEXPRESS;Initial Catalog= House_Offers;Integrated Security=True"))
                 {
                     string query = "SELECT House FROM Offers";
                     using (SqlCommand command = new SqlCommand(query, connection))
@@ -119,30 +122,42 @@ namespace Real_Major
 
         private void HouseInformation_Click(object sender, EventArgs e)
         {
-            Form7 forma7 = new Form7(user1, Convert.ToString(houseComboBox.SelectedItem));
+            ChangeHouse forma7 = new ChangeHouse(user1, Convert.ToString(houseComboBox.SelectedItem));
             forma7.Show();
             this.Hide();
         }
 
         private void showButton_Click(object sender, EventArgs e)
         {
-            Form6 House = new Form6(user1, Convert.ToString(houseComboBox.SelectedItem));
+            HousePage House = new HousePage(user1, Convert.ToString(houseComboBox.SelectedItem));
             House.Show();
             this.Hide();
         }
 
         private void changeInfoButton_Click(object sender, EventArgs e)
         {
-            Form5 Add_Delete = new Form5(user1);
+            AdminChangeInformation Add_Delete = new AdminChangeInformation(user1);
             Add_Delete.Show();
             this.Hide();
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            Form1 forma1 = new Form1();
+            LoginForm forma1 = new LoginForm();
             forma1.Show();
             this.Hide();
+        }
+
+        private void townComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void houseComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            showButton.Enabled = true;
+            changeHouseInfoButton.Enabled = true;
+            changeInfoButton.Enabled = true;
         }
     }
 }

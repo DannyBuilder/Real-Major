@@ -18,10 +18,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace Real_Major
 {
 
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
         public static UserClass user = new UserClass();
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
             errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
@@ -30,7 +30,7 @@ namespace Real_Major
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            Form2 register = new Form2();
+            SignUpForm register = new SignUpForm();
             register.Show();
             this.Hide();
         }
@@ -46,7 +46,7 @@ namespace Real_Major
             string password = passBox.Text;
             string pass;
             string data;
-            string connectionString = @"Data Source=DESKTOP-ETJDNTM;Initial Catalog= House_Offers;Integrated Security=True";
+            string connectionString = @"Data Source=OFFICE-30637054\SQLEXPRESS;Initial Catalog= House_Offers;Integrated Security=True";
 
 
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -78,13 +78,13 @@ namespace Real_Major
                             MessageBox.Show(Convert.ToString(user.roleID));
                             if (user.roleID == 1)
                             {
-                                Form4 userForm = new Form4(user);
+                                SelectForm userForm = new SelectForm(user);
                                 userForm.Show();
                                 this.Hide();
                             }
                             else if (user.roleID == 2)
                             {
-                                Form3 adminForm = new Form3(user);
+                                AdminSelectForm adminForm = new AdminSelectForm(user);
                                 adminForm.Show();
                                 this.Hide();
                             }
@@ -169,6 +169,11 @@ namespace Real_Major
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usernameBox_TextChanged(object sender, EventArgs e)
         {
 
         }

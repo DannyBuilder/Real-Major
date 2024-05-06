@@ -41,6 +41,7 @@
             dataGridView.RowTemplate.Height = 29;
             dataGridView.Size = new Size(809, 641);
             dataGridView.TabIndex = 0;
+            dataGridView.CellContentClick += dataGridView_CellContentClick;
             // 
             // Form8
             // 
