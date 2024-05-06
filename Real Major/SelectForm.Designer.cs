@@ -41,6 +41,7 @@
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox4 = new PictureBox();
+            browseButton = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -172,12 +173,23 @@
             pictureBox4.TabIndex = 23;
             pictureBox4.TabStop = false;
             // 
+            // browseButton
+            // 
+            browseButton.Location = new Point(363, 441);
+            browseButton.Name = "browseButton";
+            browseButton.Size = new Size(174, 33);
+            browseButton.TabIndex = 24;
+            browseButton.Text = "Browse Houses";
+            browseButton.UseVisualStyleBackColor = true;
+            browseButton.Click += browseButton_Click;
+            // 
             // SelectForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(913, 600);
+            Controls.Add(browseButton);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(button2);
@@ -214,5 +226,6 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
         private PictureBox pictureBox4;
+        private Button browseButton;
     }
 }

@@ -12,7 +12,7 @@ namespace Real_Major
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             
-            Application.Run(new GridView());
+            Application.Run(new LoginForm());
         }
     }
 }

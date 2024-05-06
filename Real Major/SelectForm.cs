@@ -205,5 +205,12 @@ namespace Real_Major
         {
 
         }
+
+        private void browseButton_Click(object sender, EventArgs e)
+        {
+            GridView grid = new GridView(user1);
+            grid.Show();
+            this.Hide();
+        }
     }
 }

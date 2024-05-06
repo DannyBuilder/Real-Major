@@ -16,11 +16,13 @@ namespace Real_Major
 {
     public partial class GridView : Form
     {
+        UserClass user1;
         private string connectionString = @"Data Source=DESKTOP-UUN906P;Initial Catalog=House_Offers;Integrated Security=True";
         private DataTable resultTable;
         private int count;
-        public GridView()
+        public GridView(UserClass user)
         {
+            user1 = user;
             InitializeComponent();
         }
 
@@ -175,6 +177,13 @@ namespace Real_Major
             {
                 MessageBox.Show("There was an error! Please try again!");
             }
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            SelectForm form = new SelectForm(user1);
+            form.Show();
+            this.Hide();
         }
     }
 }

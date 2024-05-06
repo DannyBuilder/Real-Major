@@ -34,6 +34,7 @@
             filterBox = new ComboBox();
             refreshButton = new Button();
             filterBox2 = new ComboBox();
+            backButton = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -93,11 +94,22 @@
             filterBox2.Size = new Size(151, 28);
             filterBox2.TabIndex = 5;
             // 
+            // backButton
+            // 
+            backButton.Location = new Point(12, 733);
+            backButton.Name = "backButton";
+            backButton.Size = new Size(94, 29);
+            backButton.TabIndex = 6;
+            backButton.Text = "Back";
+            backButton.UseVisualStyleBackColor = true;
+            backButton.Click += backButton_Click;
+            // 
             // GridView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1042, 747);
+            ClientSize = new Size(1046, 774);
+            Controls.Add(backButton);
             Controls.Add(filterBox2);
             Controls.Add(refreshButton);
             Controls.Add(filterBox);
@@ -120,5 +132,6 @@
         private ComboBox filterBox;
         private Button refreshButton;
         private ComboBox filterBox2;
+        private Button backButton;
     }
 }
